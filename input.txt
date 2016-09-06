@@ -1,0 +1,19 @@
+UCS
+A
+G
+10
+A B 13
+A C 3
+A D 2
+A H 3
+B E 13
+C F 2
+D F 3
+H F 3
+E G 1
+F G 1
+4
+A 4
+B 1
+C 1 
+D 0
