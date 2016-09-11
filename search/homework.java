@@ -1,3 +1,4 @@
+package search;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -24,13 +25,16 @@ public class homework {
 					break;
 		case "UCS":path =  SearchAlgo.runUCS(hw1.graph,hw1.startState,hw1.goalState);
 					break;
-		case "A*":
+		case "A*":path = SearchAlgo.runAstar(hw1.graph,hw1.getHeuristicMap(), hw1.startState,hw1.goalState);
+					break;
 		}
 		endTime = Calendar.getInstance().getTime();
+		
+		
 		//Create output.txt
 		File file = new File("output.txt");
 		try{
-		// if file doesnt exists, then create it
+		// if file doesn't exists, then create it
 					if (!file.exists()) {
 						file.createNewFile();
 					}
@@ -45,7 +49,7 @@ public class homework {
 			System.out.println("Error while writing the outpit file "+e);
 		}	
 
-		System.out.println("Time to perform search "+(endTime.getTime() - startTime.getTime())/60);
+		System.out.println("Time to perform search "+(endTime.getTime() - startTime.getTime()));
 		}catch(IOException e){
 			System.out.println("IO Error " + e);
 		}

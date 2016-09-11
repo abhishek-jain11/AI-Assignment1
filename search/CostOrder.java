@@ -1,3 +1,4 @@
+package search;
 
 public class CostOrder{
 Integer cost;
@@ -32,10 +33,10 @@ public int compareTo(CostOrder object) {
 		if(this.cost>object.cost){
 			return 1;
 		}else if(this.cost<object.cost){
-			return -1;
-		}else if(this.cost.equals(object.cost)){
+			return -1; //Tie breaker in UCS for same cost?
+		}/*else if(this.cost.equals(object.cost)){
 			return this.order.compareTo(object.order);
-		}
+		}*/
 		return 0;
 }
 

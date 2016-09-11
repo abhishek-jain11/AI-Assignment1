@@ -1,3 +1,4 @@
+package search;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -54,8 +55,12 @@ static String FILE_SEPARATOR=" ";
 	 	startTime = Calendar.getInstance().getTime();
 	 	List<Edge> edges = processLiveTrafficLine(liveTrafficLines);
 	 	hw1.setEdges(edges);
+	 	Map<String,Integer> heuristicMap = processSundayTrafficLines(sundayTrafficLines);
+	 	hw1.setHeuresticMap(heuristicMap);
 	 	endTime =Calendar.getInstance().getTime();
 	 	System.out.println("TIme to create edges "+(endTime.getTime() - startTime.getTime()));
+	 	
+	 	
 	 	
 	 	//Creating graph from edges
 	 	startTime = Calendar.getInstance().getTime();
@@ -95,16 +100,20 @@ static String FILE_SEPARATOR=" ";
 				
 					FileWriter fw = new FileWriter(file.getAbsoluteFile());
 					BufferedWriter bw = new BufferedWriter(fw);
-
+					bw.write("digraph{");
 	 	for(Map.Entry<String,Vertex> entry: graph.entrySet()){
-	 		bw.write(entry.getValue().state.name +  " "+entry.getValue().neighbours.size()+"\n");
-	 		bw.write("Neighbours of "+entry.getValue().getState().name+"\n");
+		//	bw.write(entry.getValue().state.name +  " "+entry.getValue().neighbours.size()+"\n");
+	 	//	bw.write("Neighbours of "+entry.getValue().getState().name+"\n");
+	 		bw.write(entry.getValue().state.name +" -> {");
 	 		for(Edge e: entry.getValue().neighbours){
-	 			bw.write(e.getStartState().getName() +" "+e.getDestState().getName()+ " "+e.getCost());
+	 			bw.write(e.getDestState().getName()+" ");
+	 	//		bw.write(e.getStartState().getName() +" "+e.getDestState().getName()+ " "+e.getCost());
 	 		}
-	 		bw.write("\n");
+	 		bw.write("}\n");
+	 	//	bw.write("\n");
 	 		
 	 	}
+		bw.write("}");
 		bw.close();
 		
 }catch(IOException e){
@@ -116,7 +125,24 @@ static String FILE_SEPARATOR=" ";
 	 	return hw1;	
 	}
 
- 
+ public static  Map<String,Integer> processSundayTrafficLines(String[] sundayTrafficLines){
+	 Map<String,Integer> heuristicMap = new HashMap<String,Integer>();
+	 for(int i=0;i<sundayTrafficLines.length;i++){
+		 String[] line = sundayTrafficLines[i].split(FILE_SEPARATOR);
+		 String state = line[0];
+		 
+		 //Default heuristic is 0
+		 Integer heurestic = 0;
+		 
+		 //Override cost from the input file
+		 if(line.length>1){
+			 heurestic = (Integer.valueOf(line[1]));
+		 }
+			 
+		 heuristicMap.put(state, heurestic);
+	 }
+	 return heuristicMap;
+ }
  
  public static List<Edge> processLiveTrafficLine(String[] liveTrafficLines){
 	 List<Edge> table = new ArrayList<Edge>();

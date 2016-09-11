@@ -1,5 +1,7 @@
+package search;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -110,6 +112,7 @@ public class SearchAlgo {
 			child.cost = n.cost + e.getCost();
 			child.depth = n.depth  + 1;
 			child.setOrder(e.order);
+			
 			n.children.add(child);
 		}
 		
@@ -137,6 +140,7 @@ public class SearchAlgo {
 					System.out.println("Updating existing cost");
 					System.out.println("Removing node from frontier named "+child.getState().getName());
 					frontier.remove(child);
+					//TODO: remove in map is not required, can update the value right away. This is only for debugging purposes
 					CostOrder removedCostMapNode = frontierCostMap.remove(child.getState().getName());
 					System.out.println("Removing node from frontier Cost Map with values "+removedCostMapNode);
 					System.out.println("Adding new node to frontier "+child);
@@ -179,7 +183,34 @@ public class SearchAlgo {
 		}
 				
 		while(!frontier.isEmpty()){
-// Now how to generate and traverse in DFS???
+			//	System.out.println(frontier.peek().depth+" "+frontier.peek().getState().name);
+			Node n = frontier.poll();
+			System.out.println("Node visited "+n);
+			if(n.getState().getName().equals(goalStateName)){
+				//Goal ELement found;
+				goalNode = n;
+				goalFound =true;
+				break;
+			}
+			//Explore Node and add children here
+			Vertex v =  graph.get(n.getState().getName());
+			if(v!=null){
+				for(Edge e: v.getNeighbours()){
+					Node child = new Node();
+					child.state = e.destState;
+					child.parent = n;
+					child.cost = n.cost + e.getCost();
+					child.depth = n.depth  + 1;
+					child.setOrder(e.order);
+					if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){				
+						frontier.addFirst(child);
+							}
+
+				}
+				explored.put(n.getState().getName(), n.getState());
+
+			}
+
 		}
 		
 		//Print goalNodePath
@@ -194,4 +225,97 @@ public class SearchAlgo {
 		return path;
 
 	}
+	
+	public static List<String> runAstar(Map<String,Vertex> graph, Map<String,Integer>heuristicMap, String startNodeName, String goalStateName){
+		Vertex startVertex = graph.get(startNodeName);
+		Node startNode = new Node();
+		startNode.state = startVertex.getState();
+		startNode.parent = null;
+		startNode.setCost(0);
+		startNode.depth = 0;
+		startNode.setOrder(0);
+		startNode.setHeuristic(heuristicMap.get(startVertex.getState().getName()));
+		startNode.totalCost= startNode.getCost()+startNode.getHeuristic();
+		Node goalNode = null;
+
+		//Check when heuristic and cost sum are equal for nodes
+		Comparator<Node> aStarComparator = new Comparator<Node>() {
+
+			@Override
+			public int compare(Node o1, Node o2) {
+				return o1.totalCost.compareTo(o2.getTotalCost());
+				}
+		};
+		Queue<Node> frontier = new PriorityQueue<Node>(aStarComparator);
+		Map<String,CostOrder> frontierCostMap = new HashMap<String,CostOrder>();
+		
+		frontier.add(startNode);
+		frontierCostMap.put(startNode.getState().getName(), new CostOrder(startNode.getCost(),startNode.getOrder()));
+		Map<String,State> explored = new HashMap<String,State>();
+		
+		
+		while(!frontier.isEmpty()){
+		//	System.out.println(frontier.peek().depth+" "+frontier.peek().getState().name);
+		Node n = frontier.poll();
+		frontierCostMap.remove(n.getState().getName());
+		//Explore Node and add children here
+		Vertex v =  graph.get(n.getState().getName());
+		if(v!=null){
+		for(Edge e: v.getNeighbours()){
+			Node child = new Node();
+			child.state = e.destState;
+			child.parent = n;
+			child.cost = n.cost + e.getCost() ;
+			child.setHeuristic(heuristicMap.get(e.destState.getName()));
+			child.depth = n.depth  + 1;
+			child.setOrder(e.order);
+			child.totalCost = Math.max(child.getCost()+child.getHeuristic(), n.getCost());
+			n.children.add(child);
+		}
+		
+		if(n.getState().getName().equals(goalStateName)){
+			//Goal Element found;
+			goalNode = n;
+			break;
+		}
+
+		explored.put(n.getState().getName(), n.getState());
+		for(Node child: n.getChildren()){
+			if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){	
+				System.out.println("Adding to frontier ");
+				System.out.println(child);
+				
+				frontier.add(child);
+				frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
+				System.out.println("");
+				System.out.println("frontier");
+				System.out.println(frontier.peek().getCost()+" Name:"+frontier.peek().getState().getName()+" Parent:"+frontier.peek().getParent().getState().getName()+ " Order:"+frontier.peek().getOrder());
+					}
+			else//For updating existing cost
+				if(frontier.contains(child) && frontierCostMap.get(child.getState().getName()).compareTo(new CostOrder(child.getCost(),child.getOrder())) > 0 ){
+					System.out.println("Updating existing cost");
+					System.out.println("Removing node from frontier named "+child.getState().getName());
+					frontier.remove(child);
+					//TODO: remove in map is not required, can update the value right away. This is only for debugging purposes
+					CostOrder removedCostMapNode = frontierCostMap.remove(child.getState().getName());
+					System.out.println("Removing node from frontier Cost Map with values "+removedCostMapNode);
+					System.out.println("Adding new node to frontier "+child);
+					frontier.add(child);
+					frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
+					}
+				}
+		System.out.println();
+			}
+		}
+
+		
+		List<String> path = new ArrayList<String>();
+		while(goalNode!=null){
+			System.out.println(goalNode.getState().getName()+" "+goalNode.cost);
+			path.add(goalNode.getState().getName()+" "+goalNode.cost);
+			goalNode = goalNode.parent;
+		}
+		return path;
+	}
+	
 }

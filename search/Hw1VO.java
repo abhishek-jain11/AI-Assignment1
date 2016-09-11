@@ -1,3 +1,4 @@
+package search;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,14 @@ public class Hw1VO {
 	int noSundayTrafficLines;
 	List<Edge> edges;
 Map<String,Vertex> graph;
+Map<String,Integer> heuristicMap;
+
+	public Map<String, Integer> getHeuristicMap() {
+	return heuristicMap;
+}
+public void setHeuresticMap(Map<String, Integer> heuristicMap) {
+	this.heuristicMap = heuristicMap;
+}
 	public Map<String, Vertex> getGraph() {
 	return graph;
 }

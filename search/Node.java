@@ -1,5 +1,5 @@
+package search;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Node implements Comparable<Node> {
@@ -9,10 +9,20 @@ public class Node implements Comparable<Node> {
 	Integer cost;
 	int depth;
 	Integer order;
+	Integer heuristic;
+	Integer totalCost;
 	public Node(){
 	 this.children = new ArrayList<Node>();				
 	}
 	
+	public Integer getTotalCost() {
+		return totalCost;
+	}
+
+	public void setTotalCost(Integer totalCost) {
+		this.totalCost = totalCost;
+	}
+
 	public State getState() {
 		return state;
 	}
@@ -82,7 +92,20 @@ public class Node implements Comparable<Node> {
 	
 	@Override
 	public String toString(){
-		return "Name: "+this.state.getName()+" Parent: "+this.getParent().getState().getName()+" Cost: "+this.getCost()+" Order: "+this.getOrder();
+		return "Name: "+this.state.getName()
+				+" Parent: "+(this.getParent()!=null?this.getParent().getState().getName():"Null")
+				+" Cost: "+this.getCost()
+				+" Order: "+this.getOrder();
 	}
+
+	public Integer getHeuristic() {
+		return heuristic;
+	}
+
+	public void setHeuristic(Integer heuristic) {
+		this.heuristic = heuristic;
+	}
+	
+	
 	
 }
