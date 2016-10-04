@@ -69,6 +69,12 @@ static String FILE_SEPARATOR=" ";
 	 		if(graph.get(e.startState.getName())!=null){
 	 			Vertex v = graph.get(e.startState.getName());
 	 			v.neighbours.add(e);
+	 		
+	 		if(graph.get(e.destState.getName())==null){
+	 				Vertex v2 = new Vertex();
+		 			v2.setState(e.destState);
+		 			graph.put(v2.getState().name, v2);
+	 			}
 	 		}else{
 	 			if(graph.get(e.startState.getName())==null){
 	 			Vertex v = new Vertex();

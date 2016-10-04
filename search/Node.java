@@ -15,13 +15,6 @@ public class Node implements Comparable<Node> {
 	 this.children = new ArrayList<Node>();				
 	}
 	
-	public Integer getTotalCost() {
-		return totalCost;
-	}
-
-	public void setTotalCost(Integer totalCost) {
-		this.totalCost = totalCost;
-	}
 
 	public State getState() {
 		return state;
@@ -90,12 +83,25 @@ public class Node implements Comparable<Node> {
 		return false;
 	}
 	
+	public Integer getTotalCost() {
+		return totalCost;
+	}
+
+
+	public void setTotalCost(Integer totalCost) {
+		this.totalCost = totalCost;
+	}
+
+
 	@Override
 	public String toString(){
 		return "Name: "+this.state.getName()
 				+" Parent: "+(this.getParent()!=null?this.getParent().getState().getName():"Null")
 				+" Cost: "+this.getCost()
-				+" Order: "+this.getOrder();
+				+" Order: "+this.getOrder()
+				+" Heuristic: "+this.getHeuristic()
+				+" TotalCost: "+this.getTotalCost();
+		
 	}
 
 	public Integer getHeuristic() {

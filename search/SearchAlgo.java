@@ -1,5 +1,4 @@
 package search;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -59,7 +58,7 @@ public class SearchAlgo {
 
 		explored.put(n.getState().getName(), n.getState());
 		for(Node child: n.getChildren()){
-			if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){				
+			if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){	
 				frontier.add(child);
 					}
 				}
@@ -89,7 +88,7 @@ public class SearchAlgo {
 		startNode.depth = 0;
 		startNode.setOrder(0);
 		Node goalNode = null;
-		
+		int frontierOrder = 1;
 		Queue<Node> frontier = new PriorityQueue<Node>();
 		Map<String,CostOrder> frontierCostMap = new HashMap<String,CostOrder>();
 		
@@ -111,11 +110,12 @@ public class SearchAlgo {
 			child.parent = n;
 			child.cost = n.cost + e.getCost();
 			child.depth = n.depth  + 1;
-			child.setOrder(e.order);
+		//	child.setOrder(e.order);
 			
 			n.children.add(child);
 		}
-		
+		System.out.println("Evalutaing Node "+n.getState().getName());
+		System.out.println("Frontier "+frontier.toString() );
 		if(n.getState().getName().equals(goalStateName)){
 			//Goal Element found;
 			goalNode = n;
@@ -127,16 +127,16 @@ public class SearchAlgo {
 			if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){	
 				System.out.println("Adding to frontier ");
 				System.out.println(child);
-				
+				child.setOrder(frontierOrder++);
 				frontier.add(child);
 				frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
 				System.out.println("");
 				System.out.println("frontier");
-				System.out.println(frontier.peek().getCost()+" Name:"+frontier.peek().getState().getName()+" Parent:"+frontier.peek().getParent().getState().getName()+ " Order:"+frontier.peek().getOrder());
+				System.out.println(frontier.peek().getCost()+" Name:"+frontier.peek().getState().getName()+" Parent:"+frontier.peek().getParent().getState().getName()+ " Cost: "+frontier.peek().getCost() );
 			//	System.out.println(frontier.peek().children);
 					}
 			else//For updating existing cost
-				if(frontier.contains(child) && frontierCostMap.get(child.getState().getName()).compareTo(new CostOrder(child.getCost(),child.getOrder())) > 0 ){
+				if(frontier.contains(child) && (frontierCostMap.get(child.getState().getName()).getCost() > child.getCost()) ){
 					System.out.println("Updating existing cost");
 					System.out.println("Removing node from frontier named "+child.getState().getName());
 					frontier.remove(child);
@@ -144,6 +144,7 @@ public class SearchAlgo {
 					CostOrder removedCostMapNode = frontierCostMap.remove(child.getState().getName());
 					System.out.println("Removing node from frontier Cost Map with values "+removedCostMapNode);
 					System.out.println("Adding new node to frontier "+child);
+					child.setOrder(frontierOrder++);
 					frontier.add(child);
 					frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
 					}
@@ -151,7 +152,7 @@ public class SearchAlgo {
 		System.out.println();
 			}
 		}
-
+		System.out.println(frontier);
 		
 		List<String> path = new ArrayList<String>();
 		while(goalNode!=null){
@@ -185,6 +186,7 @@ public class SearchAlgo {
 		while(!frontier.isEmpty()){
 			//	System.out.println(frontier.peek().depth+" "+frontier.peek().getState().name);
 			Node n = frontier.poll();
+			explored.put(n.getState().getName(), n.getState());
 			System.out.println("Node visited "+n);
 			if(n.getState().getName().equals(goalStateName)){
 				//Goal ELement found;
@@ -195,19 +197,28 @@ public class SearchAlgo {
 			//Explore Node and add children here
 			Vertex v =  graph.get(n.getState().getName());
 			if(v!=null){
-				for(Edge e: v.getNeighbours()){
+				for(int i=v.getNeighbours().size()-1;i>=0;i--){
+					Edge e = v.getNeighbours().get(i);
 					Node child = new Node();
 					child.state = e.destState;
 					child.parent = n;
 					child.cost = n.cost + e.getCost();
 					child.depth = n.depth  + 1;
 					child.setOrder(e.order);
-					if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){				
+					if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){		
+					//	System.out.println("Frontier has entry for "+child.getState().getName()+(frontier!=null?frontier.contains(child):"NULL "));
+					//	System.out.print("ExploredMap for "+child.getState().getName()+explored.containsKey(child.getState().getName()));
+						
 						frontier.addFirst(child);
-							}
+					//	System.out.println("Frontier element "+(frontier!=null?(frontier.peek()!=null?frontier.peek().getState().getName():"NULL"):"NULL"));
 
+							}
+					
+				//	System.out.println(explored.toString());
+					
 				}
-				explored.put(n.getState().getName(), n.getState());
+				
+				
 
 			}
 
@@ -233,30 +244,39 @@ public class SearchAlgo {
 		startNode.parent = null;
 		startNode.setCost(0);
 		startNode.depth = 0;
-		startNode.setOrder(0);
+		startNode.setOrder(1);
 		startNode.setHeuristic(heuristicMap.get(startVertex.getState().getName()));
-		startNode.totalCost= startNode.getCost()+startNode.getHeuristic();
+		startNode.totalCost = startNode.getCost()+startNode.getHeuristic();
 		Node goalNode = null;
 
-		//Check when heuristic and cost sum are equal for nodes
-		Comparator<Node> aStarComparator = new Comparator<Node>() {
+		Comparator<Node> c = new Comparator<Node>() {
 
 			@Override
 			public int compare(Node o1, Node o2) {
-				return o1.totalCost.compareTo(o2.getTotalCost());
-				}
+				 if(o1.getTotalCost().compareTo(o2.getTotalCost())!=0) {
+					 return o1.getTotalCost().compareTo(o2.getTotalCost());
+				 }else{
+					 return o1.getOrder().compareTo(o2.getOrder());
+				 }
+
+			}
 		};
-		Queue<Node> frontier = new PriorityQueue<Node>(aStarComparator);
+		
+		//Check when heuristic and cost sum are equal for nodes
+		Queue<Node> frontier = new PriorityQueue<Node>(c);
+		int frontierOrder =1;
 		Map<String,CostOrder> frontierCostMap = new HashMap<String,CostOrder>();
 		
 		frontier.add(startNode);
-		frontierCostMap.put(startNode.getState().getName(), new CostOrder(startNode.getCost(),startNode.getOrder()));
+		frontierCostMap.put(startNode.getState().getName(), new CostOrder(startNode.getTotalCost(),startNode.getOrder()));
 		Map<String,State> explored = new HashMap<String,State>();
 		
 		
 		while(!frontier.isEmpty()){
 		//	System.out.println(frontier.peek().depth+" "+frontier.peek().getState().name);
+
 		Node n = frontier.poll();
+		System.out.println("Processing Node \n"+n);
 		frontierCostMap.remove(n.getState().getName());
 		//Explore Node and add children here
 		Vertex v =  graph.get(n.getState().getName());
@@ -268,8 +288,8 @@ public class SearchAlgo {
 			child.cost = n.cost + e.getCost() ;
 			child.setHeuristic(heuristicMap.get(e.destState.getName()));
 			child.depth = n.depth  + 1;
-			child.setOrder(e.order);
-			child.totalCost = Math.max(child.getCost()+child.getHeuristic(), n.getCost());
+			child.totalCost = child.cost+child.getHeuristic();
+			//child.setOrder(e.order);
 			n.children.add(child);
 		}
 		
@@ -283,25 +303,29 @@ public class SearchAlgo {
 		for(Node child: n.getChildren()){
 			if(!explored.containsKey(child.getState().getName()) && !frontier.contains(child)){	
 				System.out.println("Adding to frontier ");
-				System.out.println(child);
-				
+
+				child.setOrder(frontierOrder++);
 				frontier.add(child);
-				frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
+				frontierCostMap.put(child.getState().getName(), new CostOrder(child.getTotalCost(),child.getOrder()));
+				System.out.println(child);
 				System.out.println("");
 				System.out.println("frontier");
-				System.out.println(frontier.peek().getCost()+" Name:"+frontier.peek().getState().getName()+" Parent:"+frontier.peek().getParent().getState().getName()+ " Order:"+frontier.peek().getOrder());
+				System.out.println("Name:"+frontier.peek().getState().getName()+" Parent:"+frontier.peek().getParent().getState().getName()+ " Order:"+frontier.peek().getOrder()
+						+" Cost:"+frontier.peek().getCost()+" Heuristic:"+frontier.peek().getHeuristic()+" TotalCost:"+frontier.peek().getTotalCost());
 					}
 			else//For updating existing cost
-				if(frontier.contains(child) && frontierCostMap.get(child.getState().getName()).compareTo(new CostOrder(child.getCost(),child.getOrder())) > 0 ){
+				if(frontier.contains(child) && (frontierCostMap.get(child.getState().getName()).getCost() > child.getTotalCost()) ){
 					System.out.println("Updating existing cost");
 					System.out.println("Removing node from frontier named "+child.getState().getName());
 					frontier.remove(child);
 					//TODO: remove in map is not required, can update the value right away. This is only for debugging purposes
 					CostOrder removedCostMapNode = frontierCostMap.remove(child.getState().getName());
 					System.out.println("Removing node from frontier Cost Map with values "+removedCostMapNode);
+					child.setOrder(frontierOrder++);
 					System.out.println("Adding new node to frontier "+child);
+					
 					frontier.add(child);
-					frontierCostMap.put(child.getState().getName(), new CostOrder(child.getCost(),child.getOrder()));
+					frontierCostMap.put(child.getState().getName(), new CostOrder(child.getTotalCost(),child.getOrder()));
 					}
 				}
 		System.out.println();

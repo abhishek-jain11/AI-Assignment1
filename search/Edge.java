@@ -1,5 +1,4 @@
 package search;
-
 public class Edge {
 
 	State startState;

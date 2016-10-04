@@ -1,0 +1,15 @@
+UCS
+A
+E
+6
+A B 10
+A C 15
+A D 1
+B E 3
+C E 2
+D C 9
+4
+A 4
+B 2
+C 1
+D 0
