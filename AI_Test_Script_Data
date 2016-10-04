@@ -1,0 +1,3740 @@
+[Executed at: Mon Oct 3 14:09:18 PDT 2016]
+
+Java
+gvals.txt
+Input File:1
+BFS
+A
+H
+12
+A B 1
+B C 1
+C D 1
+A E 10
+E F 2
+F G 3
+G H 3
+A I 1
+I J 1
+J K 1
+K L 1
+L H 1
+12
+A 7
+B 5
+C 5
+D 7
+E 5
+F 4
+G 3
+I 4
+J 3
+K 2
+L 1
+H 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 5
+TIme to create graph 1
+H 4
+G 3
+F 2
+E 1
+A 0
+Time to perform search 4
+Correct output:
+A 0
+E 1
+F 2
+G 3
+H 4
+Content from your output file:
+A 0
+E 1
+F 2
+G 3
+H 4
+test case passed!
+Input File:2
+BFS
+A
+G
+9
+A B 2
+A C 2
+A D 2
+A E 2
+A F 2
+F G 2
+B C 1
+C D 2
+E F 1
+7
+A 3
+B 4
+C 4
+D 3
+E 3
+F 1
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 0
+G 2
+F 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+F 1
+G 2
+Content from your output file:
+A 0
+F 1
+G 2
+test case passed!
+Input File:3
+DFS
+A
+E
+7
+A B 1
+A C 1
+A D 4
+D E 1
+A E 5
+B E 1
+C E 2
+5
+A 3
+B 1
+C 2
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 1 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: C Parent: A Cost: 1 Order: 2 Heuristic: null TotalCost: null
+Node visited Name: D Parent: A Cost: 4 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: E Parent: A Cost: 5 Order: 5 Heuristic: null TotalCost: null
+E 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+E 1
+Content from your output file:
+A 0
+E 1
+test case passed!
+Input File:4
+UCS
+A
+S
+5
+A B 1
+A C 1
+B C 5
+B D 4
+C S 1
+5
+A 2
+B 6
+C 1
+D 4
+S 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Evalutaing Node B
+Frontier [Name: C Parent: A Cost: 1 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: B Cost: 5 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:C Parent:A Cost: 1
+Evalutaing Node C
+Frontier [Name: D Parent: B Cost: 5 Order: 3 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: S Parent: C Cost: 2 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:S Parent:C Cost: 2
+Evalutaing Node S
+Frontier [Name: D Parent: B Cost: 5 Order: 3 Heuristic: null TotalCost: null]
+[Name: D Parent: B Cost: 5 Order: 3 Heuristic: null TotalCost: null]
+S 2
+C 1
+A 0
+Time to perform search 5
+Correct output:
+A 0
+C 1
+S 2
+Content from your output file:
+A 0
+C 1
+S 2
+test case passed!
+Input File:5
+A*
+A
+S
+10
+A S 10
+A B 1
+B C 1
+C D 4
+C G 1
+D G 4
+G S 1
+B S 5
+F S 9
+A F 1
+7
+A 6
+B 4
+C 1
+D 1
+F 7
+G 1
+S 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 6 TotalCost: 6
+Adding to frontier 
+Name: S Parent: A Cost: 10 Order: 1 Heuristic: 0 TotalCost: 10
+frontier
+Name:S Parent:A Order:1 Cost:10 Heuristic:0 TotalCost:10
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 2 Heuristic: 4 TotalCost: 5
+frontier
+Name:B Parent:A Order:2 Cost:1 Heuristic:4 TotalCost:5
+Adding to frontier 
+Name: F Parent: A Cost: 1 Order: 3 Heuristic: 7 TotalCost: 8
+frontier
+Name:B Parent:A Order:2 Cost:1 Heuristic:4 TotalCost:5
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 2 Heuristic: 4 TotalCost: 5
+Adding to frontier 
+Name: C Parent: B Cost: 2 Order: 4 Heuristic: 1 TotalCost: 3
+frontier
+Name:C Parent:B Order:4 Cost:2 Heuristic:1 TotalCost:3
+Updating existing cost
+Removing node from frontier named S
+Removing node from frontier Cost Map with values Cost: 10 Order:1
+Adding new node to frontier Name: S Parent: B Cost: 6 Order: 5 Heuristic: 0 TotalCost: 6
+Processing Node 
+Name: C Parent: B Cost: 2 Order: 4 Heuristic: 1 TotalCost: 3
+Adding to frontier 
+Name: D Parent: C Cost: 6 Order: 6 Heuristic: 1 TotalCost: 7
+frontier
+Name:S Parent:B Order:5 Cost:6 Heuristic:0 TotalCost:6
+Adding to frontier 
+Name: G Parent: C Cost: 3 Order: 7 Heuristic: 1 TotalCost: 4
+frontier
+Name:G Parent:C Order:7 Cost:3 Heuristic:1 TotalCost:4
+Processing Node 
+Name: G Parent: C Cost: 3 Order: 7 Heuristic: 1 TotalCost: 4
+Updating existing cost
+Removing node from frontier named S
+Removing node from frontier Cost Map with values Cost: 6 Order:5
+Adding new node to frontier Name: S Parent: G Cost: 4 Order: 8 Heuristic: 0 TotalCost: 4
+Processing Node 
+Name: S Parent: G Cost: 4 Order: 8 Heuristic: 0 TotalCost: 4
+S 4
+G 3
+C 2
+B 1
+A 0
+Time to perform search 8
+Correct output:
+A 0
+B 1
+C 2
+G 3
+S 4
+Content from your output file:
+A 0
+B 1
+C 2
+G 3
+S 4
+test case passed!
+Input File:6
+BFS
+A
+S
+10
+A S 10
+A B 1
+B C 1
+C D 4
+C G 1
+D G 4
+G S 1
+B S 5
+F S 9
+A F 1
+7
+A 6
+B 4
+C 1
+D 1
+F 7
+G 1
+S 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+S 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+S 1
+Content from your output file:
+A 0
+S 1
+test case passed!
+Input File:7
+DFS
+A
+H
+12
+A B 1
+B C 1
+C D 1
+A E 10
+E F 2
+F G 3
+G H 3
+A I 1
+I J 1
+J K 1
+K L 1
+L H 1
+12
+A 7
+B 5
+C 5
+D 7
+E 5
+F 4
+G 3
+I 4
+J 3
+K 2
+L 1
+H 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 1 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: C Parent: B Cost: 2 Order: 2 Heuristic: null TotalCost: null
+Node visited Name: D Parent: C Cost: 3 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: E Parent: A Cost: 10 Order: 4 Heuristic: null TotalCost: null
+Node visited Name: F Parent: E Cost: 12 Order: 5 Heuristic: null TotalCost: null
+Node visited Name: G Parent: F Cost: 15 Order: 6 Heuristic: null TotalCost: null
+Node visited Name: H Parent: G Cost: 18 Order: 7 Heuristic: null TotalCost: null
+H 4
+G 3
+F 2
+E 1
+A 0
+Time to perform search 3
+Correct output:
+A 0
+E 1
+F 2
+G 3
+H 4
+Content from your output file:
+A 0
+E 1
+F 2
+G 3
+H 4
+test case passed!
+Input File:8
+A*
+A
+H
+12
+A B 1
+B C 1
+C D 1
+A E 10
+E F 2
+F G 3
+G H 3
+A I 1
+I J 1
+J K 1
+K L 1
+L H 1
+12
+A 7
+B 5
+C 5
+D 7
+E 5
+F 4
+G 3
+I 4
+J 3
+K 2
+L 1
+H 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 7 TotalCost: 7
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 5 TotalCost: 6
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:5 TotalCost:6
+Adding to frontier 
+Name: E Parent: A Cost: 10 Order: 2 Heuristic: 5 TotalCost: 15
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:5 TotalCost:6
+Adding to frontier 
+Name: I Parent: A Cost: 1 Order: 3 Heuristic: 4 TotalCost: 5
+frontier
+Name:I Parent:A Order:3 Cost:1 Heuristic:4 TotalCost:5
+Processing Node 
+Name: I Parent: A Cost: 1 Order: 3 Heuristic: 4 TotalCost: 5
+Adding to frontier 
+Name: J Parent: I Cost: 2 Order: 4 Heuristic: 3 TotalCost: 5
+frontier
+Name:J Parent:I Order:4 Cost:2 Heuristic:3 TotalCost:5
+Processing Node 
+Name: J Parent: I Cost: 2 Order: 4 Heuristic: 3 TotalCost: 5
+Adding to frontier 
+Name: K Parent: J Cost: 3 Order: 5 Heuristic: 2 TotalCost: 5
+frontier
+Name:K Parent:J Order:5 Cost:3 Heuristic:2 TotalCost:5
+Processing Node 
+Name: K Parent: J Cost: 3 Order: 5 Heuristic: 2 TotalCost: 5
+Adding to frontier 
+Name: L Parent: K Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+frontier
+Name:L Parent:K Order:6 Cost:4 Heuristic:1 TotalCost:5
+Processing Node 
+Name: L Parent: K Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+Adding to frontier 
+Name: H Parent: L Cost: 5 Order: 7 Heuristic: 0 TotalCost: 5
+frontier
+Name:H Parent:L Order:7 Cost:5 Heuristic:0 TotalCost:5
+Processing Node 
+Name: H Parent: L Cost: 5 Order: 7 Heuristic: 0 TotalCost: 5
+H 5
+L 4
+K 3
+J 2
+I 1
+A 0
+Time to perform search 6
+Correct output:
+A 0
+I 1
+J 2
+K 3
+L 4
+H 5
+Content from your output file:
+A 0
+I 1
+J 2
+K 3
+L 4
+H 5
+test case passed!
+Input File:9
+BFS
+A
+G
+8
+A B 2
+A C 2
+A D 2
+A E 2
+A F 2
+F G 2
+B C 1
+C D 2
+7
+A 3
+B 4
+C 4
+D 3
+E 3
+F 1
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+G 2
+F 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+F 1
+G 2
+Content from your output file:
+A 0
+F 1
+G 2
+test case passed!
+Input File:10
+A*
+A
+E
+7
+A B 1
+A C 1
+A D 4
+D E 1
+A E 5
+B E 1
+C E 2
+5
+A 3
+B 1
+C 2
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 0
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 3 TotalCost: 3
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: 2 Heuristic: 2 TotalCost: 3
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: D Parent: A Cost: 4 Order: 3 Heuristic: 1 TotalCost: 5
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: E Parent: A Cost: 5 Order: 4 Heuristic: 0 TotalCost: 5
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 5 Order:4
+Adding new node to frontier Name: E Parent: B Cost: 2 Order: 5 Heuristic: 0 TotalCost: 2
+Processing Node 
+Name: E Parent: B Cost: 2 Order: 5 Heuristic: 0 TotalCost: 2
+E 2
+B 1
+A 0
+Time to perform search 5
+Correct output:
+A 0
+B 1
+E 2
+Content from your output file:
+A 0
+B 1
+E 2
+test case passed!
+Input File:11
+BFS
+A
+E
+6
+A B 2
+B C 2
+C D 2
+D E 2
+A F 2
+F E 2
+6
+A 4
+B 3
+C 2
+D 1
+F 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+E 2
+F 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+F 1
+E 2
+Content from your output file:
+A 0
+F 1
+E 2
+test case passed!
+Input File:12
+BFS
+A
+E
+4
+A B 4
+B C 4
+C D 4
+D E 4
+5
+A 4
+B 3
+C 2
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+E 4
+D 3
+C 2
+B 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+B 1
+C 2
+D 3
+E 4
+Content from your output file:
+A 0
+B 1
+C 2
+D 3
+E 4
+test case passed!
+Input File:13
+DFS
+A
+E
+4
+A B 4
+B C 4
+C D 4
+D E 4
+5
+A 4
+B 3
+C 2
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 4 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: C Parent: B Cost: 8 Order: 2 Heuristic: null TotalCost: null
+Node visited Name: D Parent: C Cost: 12 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: E Parent: D Cost: 16 Order: 4 Heuristic: null TotalCost: null
+E 4
+D 3
+C 2
+B 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+B 1
+C 2
+D 3
+E 4
+Content from your output file:
+A 0
+B 1
+C 2
+D 3
+E 4
+test case passed!
+Input File:14
+A*
+A
+E
+6
+A B 2
+B C 2
+C D 2
+D E 2
+A F 10
+F E 10
+6
+A 4
+B 3
+C 2
+D 1
+F 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 4 TotalCost: 4
+Adding to frontier 
+Name: B Parent: A Cost: 2 Order: 1 Heuristic: 3 TotalCost: 5
+frontier
+Name:B Parent:A Order:1 Cost:2 Heuristic:3 TotalCost:5
+Adding to frontier 
+Name: F Parent: A Cost: 10 Order: 2 Heuristic: 1 TotalCost: 11
+frontier
+Name:B Parent:A Order:1 Cost:2 Heuristic:3 TotalCost:5
+Processing Node 
+Name: B Parent: A Cost: 2 Order: 1 Heuristic: 3 TotalCost: 5
+Adding to frontier 
+Name: C Parent: B Cost: 4 Order: 3 Heuristic: 2 TotalCost: 6
+frontier
+Name:C Parent:B Order:3 Cost:4 Heuristic:2 TotalCost:6
+Processing Node 
+Name: C Parent: B Cost: 4 Order: 3 Heuristic: 2 TotalCost: 6
+Adding to frontier 
+Name: D Parent: C Cost: 6 Order: 4 Heuristic: 1 TotalCost: 7
+frontier
+Name:D Parent:C Order:4 Cost:6 Heuristic:1 TotalCost:7
+Processing Node 
+Name: D Parent: C Cost: 6 Order: 4 Heuristic: 1 TotalCost: 7
+Adding to frontier 
+Name: E Parent: D Cost: 8 Order: 5 Heuristic: 0 TotalCost: 8
+frontier
+Name:E Parent:D Order:5 Cost:8 Heuristic:0 TotalCost:8
+Processing Node 
+Name: E Parent: D Cost: 8 Order: 5 Heuristic: 0 TotalCost: 8
+E 8
+D 6
+C 4
+B 2
+A 0
+Time to perform search 4
+Correct output:
+A 0
+B 2
+C 4
+D 6
+E 8
+Content from your output file:
+A 0
+B 2
+C 4
+D 6
+E 8
+test case passed!
+Input File:15
+BFS
+A
+C
+6
+A B 2
+B C 2
+D C 2
+E D 2
+A F 2
+F E 2
+6
+A 2
+B 1
+D 1
+F 3
+E 2
+C 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 1
+TIme to create graph 1
+C 2
+B 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+B 1
+C 2
+Content from your output file:
+A 0
+B 1
+C 2
+test case passed!
+Input File:16
+UCS
+A
+D
+4
+A B 1
+A C 1
+B D 8
+C D 8
+4
+A 5
+B 3
+C 2
+D 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Evalutaing Node B
+Frontier [Name: C Parent: A Cost: 1 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: B Cost: 9 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:C Parent:A Cost: 1
+Evalutaing Node C
+Frontier [Name: D Parent: B Cost: 9 Order: 3 Heuristic: null TotalCost: null]
+Evalutaing Node D
+Frontier []
+[]
+D 9
+B 1
+A 0
+Time to perform search 4
+Correct output:
+A 0
+B 1
+D 9
+Content from your output file:
+A 0
+B 1
+D 9
+test case passed!
+Input File:17
+A*
+A
+D
+4
+A B 1
+A C 1
+B D 8
+C D 8
+4
+A 5
+B 3
+C 2
+D 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 1
+TIme to create graph 0
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 5 TotalCost: 5
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 3 TotalCost: 4
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:3 TotalCost:4
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: 2 Heuristic: 2 TotalCost: 3
+frontier
+Name:C Parent:A Order:2 Cost:1 Heuristic:2 TotalCost:3
+Processing Node 
+Name: C Parent: A Cost: 1 Order: 2 Heuristic: 2 TotalCost: 3
+Adding to frontier 
+Name: D Parent: C Cost: 9 Order: 3 Heuristic: 0 TotalCost: 9
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:3 TotalCost:4
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 3 TotalCost: 4
+Processing Node 
+Name: D Parent: C Cost: 9 Order: 3 Heuristic: 0 TotalCost: 9
+D 9
+C 1
+A 0
+Time to perform search 4
+Correct output:
+A 0
+C 1
+D 9
+Content from your output file:
+A 0
+C 1
+D 9
+test case passed!
+Input File:18
+A*
+A
+D
+4
+A B 3
+A C 3
+B D 2
+C D 1
+4
+A 4
+B 2
+C 1
+D 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 1
+TIme to create graph 0
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 4 TotalCost: 4
+Adding to frontier 
+Name: B Parent: A Cost: 3 Order: 1 Heuristic: 2 TotalCost: 5
+frontier
+Name:B Parent:A Order:1 Cost:3 Heuristic:2 TotalCost:5
+Adding to frontier 
+Name: C Parent: A Cost: 3 Order: 2 Heuristic: 1 TotalCost: 4
+frontier
+Name:C Parent:A Order:2 Cost:3 Heuristic:1 TotalCost:4
+Processing Node 
+Name: C Parent: A Cost: 3 Order: 2 Heuristic: 1 TotalCost: 4
+Adding to frontier 
+Name: D Parent: C Cost: 4 Order: 3 Heuristic: 0 TotalCost: 4
+frontier
+Name:D Parent:C Order:3 Cost:4 Heuristic:0 TotalCost:4
+Processing Node 
+Name: D Parent: C Cost: 4 Order: 3 Heuristic: 0 TotalCost: 4
+D 4
+C 3
+A 0
+Time to perform search 4
+Correct output:
+A 0
+C 3
+D 4
+Content from your output file:
+A 0
+C 3
+D 4
+test case passed!
+Input File:19
+BFS
+A
+D
+4
+A B 5
+A C 3
+B D 1
+C D 2
+4
+A 4
+B 1
+C 1
+D 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 1
+TIme to create graph 0
+D 2
+B 1
+A 0
+Time to perform search 1
+Correct output:
+A 0
+B 1
+D 2
+Content from your output file:
+A 0
+B 1
+D 2
+test case passed!
+Input File:20
+A*
+JordanHome
+StaplesCenter
+8
+JordanHome CA73/NewportCoastDr 5
+CA73/NewportCoastDr I405/CA73 10
+I405/CA73 I110/I405 25
+I110/I405 I10/I110 20
+I10/I110 I110/I405 30
+I10/I110 I10/I405 9
+I105/I110 I10/I110 7
+I10/I110 StaplesCenter 3
+8
+JordanHome 55
+CA73/NewportCoastDr 45
+I405/CA73 40
+I110/I405 16
+I105/I110 8
+I10/I110 2
+I10/I405 3
+StaplesCenter 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 0
+Processing Node 
+Name: JordanHome Parent: Null Cost: 0 Order: 1 Heuristic: 55 TotalCost: 55
+Adding to frontier 
+Name: CA73/NewportCoastDr Parent: JordanHome Cost: 5 Order: 1 Heuristic: 45 TotalCost: 50
+frontier
+Name:CA73/NewportCoastDr Parent:JordanHome Order:1 Cost:5 Heuristic:45 TotalCost:50
+Processing Node 
+Name: CA73/NewportCoastDr Parent: JordanHome Cost: 5 Order: 1 Heuristic: 45 TotalCost: 50
+Adding to frontier 
+Name: I405/CA73 Parent: CA73/NewportCoastDr Cost: 15 Order: 2 Heuristic: 40 TotalCost: 55
+frontier
+Name:I405/CA73 Parent:CA73/NewportCoastDr Order:2 Cost:15 Heuristic:40 TotalCost:55
+Processing Node 
+Name: I405/CA73 Parent: CA73/NewportCoastDr Cost: 15 Order: 2 Heuristic: 40 TotalCost: 55
+Adding to frontier 
+Name: I110/I405 Parent: I405/CA73 Cost: 40 Order: 3 Heuristic: 16 TotalCost: 56
+frontier
+Name:I110/I405 Parent:I405/CA73 Order:3 Cost:40 Heuristic:16 TotalCost:56
+Processing Node 
+Name: I110/I405 Parent: I405/CA73 Cost: 40 Order: 3 Heuristic: 16 TotalCost: 56
+Adding to frontier 
+Name: I10/I110 Parent: I110/I405 Cost: 60 Order: 4 Heuristic: 2 TotalCost: 62
+frontier
+Name:I10/I110 Parent:I110/I405 Order:4 Cost:60 Heuristic:2 TotalCost:62
+Processing Node 
+Name: I10/I110 Parent: I110/I405 Cost: 60 Order: 4 Heuristic: 2 TotalCost: 62
+Adding to frontier 
+Name: I10/I405 Parent: I10/I110 Cost: 69 Order: 5 Heuristic: 3 TotalCost: 72
+frontier
+Name:I10/I405 Parent:I10/I110 Order:5 Cost:69 Heuristic:3 TotalCost:72
+Adding to frontier 
+Name: StaplesCenter Parent: I10/I110 Cost: 63 Order: 6 Heuristic: 0 TotalCost: 63
+frontier
+Name:StaplesCenter Parent:I10/I110 Order:6 Cost:63 Heuristic:0 TotalCost:63
+Processing Node 
+Name: StaplesCenter Parent: I10/I110 Cost: 63 Order: 6 Heuristic: 0 TotalCost: 63
+StaplesCenter 63
+I10/I110 60
+I110/I405 40
+I405/CA73 15
+CA73/NewportCoastDr 5
+JordanHome 0
+Time to perform search 5
+Correct output:
+JordanHome 0
+CA73/NewportCoastDr 5
+I405/CA73 15
+I110/I405 40
+I10/I110 60
+StaplesCenter 63
+Content from your output file:
+JordanHome 0
+CA73/NewportCoastDr 5
+I405/CA73 15
+I110/I405 40
+I10/I110 60
+StaplesCenter 63
+test case passed!
+Input File:21
+BFS
+Sibiu
+Bucharest
+5
+Sibiu Rimnicu 80
+Rimnicu Pitesti 97
+Pitesti Bucharest 101
+Sibiu Fagaras 99
+Fagaras Bucharest 211
+5
+Sibiu 4
+Rimnicu 1
+Pitesti 1
+Fagaras 1
+Bucharest 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Bucharest 2
+Fagaras 1
+Sibiu 0
+Time to perform search 2
+Correct output:
+Sibiu 0
+Fagaras 1
+Bucharest 2
+Content from your output file:
+Sibiu 0
+Fagaras 1
+Bucharest 2
+test case passed!
+Input File:22
+UCS
+Arad
+Pitesti
+22
+Oradea Zerind 71
+Oradea Sibiu 151
+Zerind Arad 75
+Arad Sibiu 140
+Arad Timisoara 118
+Timisoara Lugoj 111
+Lugoj Mehadia 70
+Mehadia Dobreta 75
+Dobreta Craiova 120
+Sibiu Fagaras 99
+Sibiu Rimnicu 80
+Rimnicu Craiova 146
+Rimnicu Pitesti 97
+Fagaras Bucharest 211
+Pitesti Bucharest 101
+Giurgiu Bucharest 90
+Neamt Iasi 87
+Iasi Vaslui 92
+Vaslui Urziceni 142
+Bucharest Urziceni 85
+Urziceni Hirsova 98
+Hirsova Eforie 86
+20
+Arad 366
+Bucharest 0
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Oradea 380
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Pitesti 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Evalutaing Node Arad
+Frontier []
+Adding to frontier 
+Name: Sibiu Parent: Arad Cost: 140 Order: null Heuristic: null TotalCost: null
+frontier
+140 Name:Sibiu Parent:Arad Cost: 140
+Adding to frontier 
+Name: Timisoara Parent: Arad Cost: 118 Order: null Heuristic: null TotalCost: null
+frontier
+118 Name:Timisoara Parent:Arad Cost: 118
+Evalutaing Node Timisoara
+Frontier [Name: Sibiu Parent: Arad Cost: 140 Order: 1 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Lugoj Parent: Timisoara Cost: 229 Order: null Heuristic: null TotalCost: null
+frontier
+140 Name:Sibiu Parent:Arad Cost: 140
+Evalutaing Node Sibiu
+Frontier [Name: Lugoj Parent: Timisoara Cost: 229 Order: 3 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Fagaras Parent: Sibiu Cost: 239 Order: null Heuristic: null TotalCost: null
+frontier
+229 Name:Lugoj Parent:Timisoara Cost: 229
+Adding to frontier 
+Name: Rimnicu Parent: Sibiu Cost: 220 Order: null Heuristic: null TotalCost: null
+frontier
+220 Name:Rimnicu Parent:Sibiu Cost: 220
+Evalutaing Node Rimnicu
+Frontier [Name: Lugoj Parent: Timisoara Cost: 229 Order: 3 Heuristic: null TotalCost: null, Name: Fagaras Parent: Sibiu Cost: 239 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 366 Order: null Heuristic: null TotalCost: null
+frontier
+229 Name:Lugoj Parent:Timisoara Cost: 229
+Adding to frontier 
+Name: Pitesti Parent: Rimnicu Cost: 317 Order: null Heuristic: null TotalCost: null
+frontier
+229 Name:Lugoj Parent:Timisoara Cost: 229
+Evalutaing Node Lugoj
+Frontier [Name: Fagaras Parent: Sibiu Cost: 239 Order: 4 Heuristic: null TotalCost: null, Name: Pitesti Parent: Rimnicu Cost: 317 Order: 7 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 366 Order: 6 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Mehadia Parent: Lugoj Cost: 299 Order: null Heuristic: null TotalCost: null
+frontier
+239 Name:Fagaras Parent:Sibiu Cost: 239
+Evalutaing Node Fagaras
+Frontier [Name: Mehadia Parent: Lugoj Cost: 299 Order: 8 Heuristic: null TotalCost: null, Name: Pitesti Parent: Rimnicu Cost: 317 Order: 7 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 366 Order: 6 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Bucharest Parent: Fagaras Cost: 450 Order: null Heuristic: null TotalCost: null
+frontier
+299 Name:Mehadia Parent:Lugoj Cost: 299
+Evalutaing Node Mehadia
+Frontier [Name: Pitesti Parent: Rimnicu Cost: 317 Order: 7 Heuristic: null TotalCost: null, Name: Bucharest Parent: Fagaras Cost: 450 Order: 9 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 366 Order: 6 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Dobreta Parent: Mehadia Cost: 374 Order: null Heuristic: null TotalCost: null
+frontier
+317 Name:Pitesti Parent:Rimnicu Cost: 317
+Evalutaing Node Pitesti
+Frontier [Name: Craiova Parent: Rimnicu Cost: 366 Order: 6 Heuristic: null TotalCost: null, Name: Dobreta Parent: Mehadia Cost: 374 Order: 10 Heuristic: null TotalCost: null, Name: Bucharest Parent: Fagaras Cost: 450 Order: 9 Heuristic: null TotalCost: null]
+[Name: Craiova Parent: Rimnicu Cost: 366 Order: 6 Heuristic: null TotalCost: null, Name: Dobreta Parent: Mehadia Cost: 374 Order: 10 Heuristic: null TotalCost: null, Name: Bucharest Parent: Fagaras Cost: 450 Order: 9 Heuristic: null TotalCost: null]
+Pitesti 317
+Rimnicu 220
+Sibiu 140
+Arad 0
+Time to perform search 6
+Correct output:
+Arad 0
+Sibiu 140
+Rimnicu 220
+Pitesti 317
+Content from your output file:
+Arad 0
+Sibiu 140
+Rimnicu 220
+Pitesti 317
+test case passed!
+Input File:23
+A*
+Oradea
+Bucharest
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Bucharest 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 3
+TIme to create graph 1
+Processing Node 
+Name: Oradea Parent: Null Cost: 0 Order: 1 Heuristic: 380 TotalCost: 380
+Adding to frontier 
+Name: Zerind Parent: Oradea Cost: 71 Order: 1 Heuristic: 374 TotalCost: 445
+frontier
+Name:Zerind Parent:Oradea Order:1 Cost:71 Heuristic:374 TotalCost:445
+Adding to frontier 
+Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: 253 TotalCost: 404
+frontier
+Name:Sibiu Parent:Oradea Order:2 Cost:151 Heuristic:253 TotalCost:404
+Processing Node 
+Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: 253 TotalCost: 404
+Adding to frontier 
+Name: Arad Parent: Sibiu Cost: 291 Order: 3 Heuristic: 366 TotalCost: 657
+frontier
+Name:Zerind Parent:Oradea Order:1 Cost:71 Heuristic:374 TotalCost:445
+Adding to frontier 
+Name: Fagaras Parent: Sibiu Cost: 250 Order: 4 Heuristic: 176 TotalCost: 426
+frontier
+Name:Fagaras Parent:Sibiu Order:4 Cost:250 Heuristic:176 TotalCost:426
+Adding to frontier 
+Name: Rimnicu Parent: Sibiu Cost: 231 Order: 5 Heuristic: 193 TotalCost: 424
+frontier
+Name:Rimnicu Parent:Sibiu Order:5 Cost:231 Heuristic:193 TotalCost:424
+Processing Node 
+Name: Rimnicu Parent: Sibiu Cost: 231 Order: 5 Heuristic: 193 TotalCost: 424
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 377 Order: 6 Heuristic: 160 TotalCost: 537
+frontier
+Name:Fagaras Parent:Sibiu Order:4 Cost:250 Heuristic:176 TotalCost:426
+Adding to frontier 
+Name: Pitesti Parent: Rimnicu Cost: 328 Order: 7 Heuristic: 10 TotalCost: 338
+frontier
+Name:Pitesti Parent:Rimnicu Order:7 Cost:328 Heuristic:10 TotalCost:338
+Processing Node 
+Name: Pitesti Parent: Rimnicu Cost: 328 Order: 7 Heuristic: 10 TotalCost: 338
+Adding to frontier 
+Name: Bucharest Parent: Pitesti Cost: 429 Order: 8 Heuristic: 0 TotalCost: 429
+frontier
+Name:Fagaras Parent:Sibiu Order:4 Cost:250 Heuristic:176 TotalCost:426
+Processing Node 
+Name: Fagaras Parent: Sibiu Cost: 250 Order: 4 Heuristic: 176 TotalCost: 426
+Processing Node 
+Name: Bucharest Parent: Pitesti Cost: 429 Order: 8 Heuristic: 0 TotalCost: 429
+Bucharest 429
+Pitesti 328
+Rimnicu 231
+Sibiu 151
+Oradea 0
+Time to perform search 5
+Correct output:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+Content from your output file:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+test case passed!
+Input File:24
+BFS
+Oradea
+Bucharest
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Bucharest 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Bucharest 3
+Fagaras 2
+Sibiu 1
+Oradea 0
+Time to perform search 3
+Correct output:
+Oradea 0
+Sibiu 1
+Fagaras 2
+Bucharest 3
+Content from your output file:
+Oradea 0
+Sibiu 1
+Fagaras 2
+Bucharest 3
+test case passed!
+Input File:25
+UCS
+Oradea
+Bucharest
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Bucharest 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 13
+TIme to create edges 3
+TIme to create graph 0
+Evalutaing Node Oradea
+Frontier []
+Adding to frontier 
+Name: Zerind Parent: Oradea Cost: 71 Order: null Heuristic: null TotalCost: null
+frontier
+71 Name:Zerind Parent:Oradea Cost: 71
+Adding to frontier 
+Name: Sibiu Parent: Oradea Cost: 151 Order: null Heuristic: null TotalCost: null
+frontier
+71 Name:Zerind Parent:Oradea Cost: 71
+Evalutaing Node Zerind
+Frontier [Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Arad Parent: Zerind Cost: 146 Order: null Heuristic: null TotalCost: null
+frontier
+146 Name:Arad Parent:Zerind Cost: 146
+Evalutaing Node Arad
+Frontier [Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Timisoara Parent: Arad Cost: 264 Order: null Heuristic: null TotalCost: null
+frontier
+151 Name:Sibiu Parent:Oradea Cost: 151
+Evalutaing Node Sibiu
+Frontier [Name: Timisoara Parent: Arad Cost: 264 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Fagaras Parent: Sibiu Cost: 250 Order: null Heuristic: null TotalCost: null
+frontier
+250 Name:Fagaras Parent:Sibiu Cost: 250
+Adding to frontier 
+Name: Rimnicu Parent: Sibiu Cost: 231 Order: null Heuristic: null TotalCost: null
+frontier
+231 Name:Rimnicu Parent:Sibiu Cost: 231
+Evalutaing Node Rimnicu
+Frontier [Name: Fagaras Parent: Sibiu Cost: 250 Order: 5 Heuristic: null TotalCost: null, Name: Timisoara Parent: Arad Cost: 264 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 377 Order: null Heuristic: null TotalCost: null
+frontier
+250 Name:Fagaras Parent:Sibiu Cost: 250
+Adding to frontier 
+Name: Pitesti Parent: Rimnicu Cost: 328 Order: null Heuristic: null TotalCost: null
+frontier
+250 Name:Fagaras Parent:Sibiu Cost: 250
+Evalutaing Node Fagaras
+Frontier [Name: Timisoara Parent: Arad Cost: 264 Order: 4 Heuristic: null TotalCost: null, Name: Pitesti Parent: Rimnicu Cost: 328 Order: 8 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Bucharest Parent: Fagaras Cost: 461 Order: null Heuristic: null TotalCost: null
+frontier
+264 Name:Timisoara Parent:Arad Cost: 264
+Evalutaing Node Timisoara
+Frontier [Name: Pitesti Parent: Rimnicu Cost: 328 Order: 8 Heuristic: null TotalCost: null, Name: Bucharest Parent: Fagaras Cost: 461 Order: 9 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Lugoj Parent: Timisoara Cost: 375 Order: null Heuristic: null TotalCost: null
+frontier
+328 Name:Pitesti Parent:Rimnicu Cost: 328
+Evalutaing Node Pitesti
+Frontier [Name: Lugoj Parent: Timisoara Cost: 375 Order: 10 Heuristic: null TotalCost: null, Name: Bucharest Parent: Fagaras Cost: 461 Order: 9 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: null TotalCost: null]
+Updating existing cost
+Removing node from frontier named Bucharest
+Removing node from frontier Cost Map with values Cost: 461 Order:9
+Adding new node to frontier Name: Bucharest Parent: Pitesti Cost: 429 Order: null Heuristic: null TotalCost: null
+Evalutaing Node Lugoj
+Frontier [Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: null TotalCost: null, Name: Bucharest Parent: Pitesti Cost: 429 Order: 11 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Mehadia Parent: Lugoj Cost: 445 Order: null Heuristic: null TotalCost: null
+frontier
+377 Name:Craiova Parent:Rimnicu Cost: 377
+Evalutaing Node Craiova
+Frontier [Name: Bucharest Parent: Pitesti Cost: 429 Order: 11 Heuristic: null TotalCost: null, Name: Mehadia Parent: Lugoj Cost: 445 Order: 12 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Dobreta Parent: Craiova Cost: 497 Order: null Heuristic: null TotalCost: null
+frontier
+429 Name:Bucharest Parent:Pitesti Cost: 429
+Evalutaing Node Bucharest
+Frontier [Name: Mehadia Parent: Lugoj Cost: 445 Order: 12 Heuristic: null TotalCost: null, Name: Dobreta Parent: Craiova Cost: 497 Order: 13 Heuristic: null TotalCost: null]
+[Name: Mehadia Parent: Lugoj Cost: 445 Order: 12 Heuristic: null TotalCost: null, Name: Dobreta Parent: Craiova Cost: 497 Order: 13 Heuristic: null TotalCost: null]
+Bucharest 429
+Pitesti 328
+Rimnicu 231
+Sibiu 151
+Oradea 0
+Time to perform search 6
+Correct output:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+Content from your output file:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+test case passed!
+Input File:26
+DFS
+Oradea
+Bucharest
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Bucharest 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 13
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: Oradea Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: Zerind Parent: Oradea Cost: 71 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: Arad Parent: Zerind Cost: 146 Order: 5 Heuristic: null TotalCost: null
+Node visited Name: Timisoara Parent: Arad Cost: 264 Order: 9 Heuristic: null TotalCost: null
+Node visited Name: Lugoj Parent: Timisoara Cost: 375 Order: 11 Heuristic: null TotalCost: null
+Node visited Name: Mehadia Parent: Lugoj Cost: 445 Order: 13 Heuristic: null TotalCost: null
+Node visited Name: Dobreta Parent: Mehadia Cost: 520 Order: 15 Heuristic: null TotalCost: null
+Node visited Name: Craiova Parent: Dobreta Cost: 640 Order: 17 Heuristic: null TotalCost: null
+Node visited Name: Rimnicu Parent: Craiova Cost: 786 Order: 24 Heuristic: null TotalCost: null
+Node visited Name: Pitesti Parent: Rimnicu Cost: 883 Order: 25 Heuristic: null TotalCost: null
+Node visited Name: Bucharest Parent: Pitesti Cost: 984 Order: 29 Heuristic: null TotalCost: null
+Bucharest 10
+Pitesti 9
+Rimnicu 8
+Craiova 7
+Dobreta 6
+Mehadia 5
+Lugoj 4
+Timisoara 3
+Arad 2
+Zerind 1
+Oradea 0
+Time to perform search 3
+Correct output:
+Oradea 0
+Zerind 1
+Arad 2
+Timisoara 3
+Lugoj 4
+Mehadia 5
+Dobreta 6
+Craiova 7
+Rimnicu 8
+Pitesti 9
+Bucharest 10
+Content from your output file:
+Oradea 0
+Zerind 1
+Arad 2
+Timisoara 3
+Lugoj 4
+Mehadia 5
+Dobreta 6
+Craiova 7
+Rimnicu 8
+Pitesti 9
+Bucharest 10
+test case passed!
+Input File:27
+DFS
+Oradea
+Neamt
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Bucharest 0
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Neamt 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 3
+TIme to create graph 1
+Node visited Name: Oradea Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: Zerind Parent: Oradea Cost: 71 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: Arad Parent: Zerind Cost: 146 Order: 5 Heuristic: null TotalCost: null
+Node visited Name: Timisoara Parent: Arad Cost: 264 Order: 9 Heuristic: null TotalCost: null
+Node visited Name: Lugoj Parent: Timisoara Cost: 375 Order: 11 Heuristic: null TotalCost: null
+Node visited Name: Mehadia Parent: Lugoj Cost: 445 Order: 13 Heuristic: null TotalCost: null
+Node visited Name: Dobreta Parent: Mehadia Cost: 520 Order: 15 Heuristic: null TotalCost: null
+Node visited Name: Craiova Parent: Dobreta Cost: 640 Order: 17 Heuristic: null TotalCost: null
+Node visited Name: Rimnicu Parent: Craiova Cost: 786 Order: 24 Heuristic: null TotalCost: null
+Node visited Name: Pitesti Parent: Rimnicu Cost: 883 Order: 25 Heuristic: null TotalCost: null
+Node visited Name: Bucharest Parent: Pitesti Cost: 984 Order: 29 Heuristic: null TotalCost: null
+Node visited Name: Fagaras Parent: Bucharest Cost: 1195 Order: 28 Heuristic: null TotalCost: null
+Node visited Name: Giurgiu Parent: Bucharest Cost: 1074 Order: 32 Heuristic: null TotalCost: null
+Node visited Name: Urziceni Parent: Bucharest Cost: 1069 Order: 39 Heuristic: null TotalCost: null
+Node visited Name: Vaslui Parent: Urziceni Cost: 1211 Order: 38 Heuristic: null TotalCost: null
+Node visited Name: Iasi Parent: Vaslui Cost: 1303 Order: 36 Heuristic: null TotalCost: null
+Node visited Name: Neamt Parent: Iasi Cost: 1390 Order: 34 Heuristic: null TotalCost: null
+Neamt 14
+Iasi 13
+Vaslui 12
+Urziceni 11
+Bucharest 10
+Pitesti 9
+Rimnicu 8
+Craiova 7
+Dobreta 6
+Mehadia 5
+Lugoj 4
+Timisoara 3
+Arad 2
+Zerind 1
+Oradea 0
+Time to perform search 4
+Correct output:
+Oradea 0
+Zerind 1
+Arad 2
+Timisoara 3
+Lugoj 4
+Mehadia 5
+Dobreta 6
+Craiova 7
+Rimnicu 8
+Pitesti 9
+Bucharest 10
+Urziceni 11
+Vaslui 12
+Iasi 13
+Neamt 14
+Content from your output file:
+Oradea 0
+Zerind 1
+Arad 2
+Timisoara 3
+Lugoj 4
+Mehadia 5
+Dobreta 6
+Craiova 7
+Rimnicu 8
+Pitesti 9
+Bucharest 10
+Urziceni 11
+Vaslui 12
+Iasi 13
+Neamt 14
+test case passed!
+Input File:28
+BFS
+Oradea
+Neamt
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Bucharest 0
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Oradea 380
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Neamt 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 3
+TIme to create graph 0
+Neamt 7
+Iasi 6
+Vaslui 5
+Urziceni 4
+Bucharest 3
+Fagaras 2
+Sibiu 1
+Oradea 0
+Time to perform search 2
+Correct output:
+Oradea 0
+Sibiu 1
+Fagaras 2
+Bucharest 3
+Urziceni 4
+Vaslui 5
+Iasi 6
+Neamt 7
+Content from your output file:
+Oradea 0
+Sibiu 1
+Fagaras 2
+Bucharest 3
+Urziceni 4
+Vaslui 5
+Iasi 6
+Neamt 7
+test case passed!
+Input File:29
+A*
+Neamt
+Oradea
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Bucharest 0
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Oradea 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 3
+TIme to create graph 0
+Processing Node 
+Name: Neamt Parent: Null Cost: 0 Order: 1 Heuristic: 234 TotalCost: 234
+Adding to frontier 
+Name: Iasi Parent: Neamt Cost: 87 Order: 1 Heuristic: 226 TotalCost: 313
+frontier
+Name:Iasi Parent:Neamt Order:1 Cost:87 Heuristic:226 TotalCost:313
+Processing Node 
+Name: Iasi Parent: Neamt Cost: 87 Order: 1 Heuristic: 226 TotalCost: 313
+Adding to frontier 
+Name: Vaslui Parent: Iasi Cost: 179 Order: 2 Heuristic: 199 TotalCost: 378
+frontier
+Name:Vaslui Parent:Iasi Order:2 Cost:179 Heuristic:199 TotalCost:378
+Processing Node 
+Name: Vaslui Parent: Iasi Cost: 179 Order: 2 Heuristic: 199 TotalCost: 378
+Adding to frontier 
+Name: Urziceni Parent: Vaslui Cost: 321 Order: 3 Heuristic: 80 TotalCost: 401
+frontier
+Name:Urziceni Parent:Vaslui Order:3 Cost:321 Heuristic:80 TotalCost:401
+Processing Node 
+Name: Urziceni Parent: Vaslui Cost: 321 Order: 3 Heuristic: 80 TotalCost: 401
+Adding to frontier 
+Name: Bucharest Parent: Urziceni Cost: 406 Order: 4 Heuristic: 0 TotalCost: 406
+frontier
+Name:Bucharest Parent:Urziceni Order:4 Cost:406 Heuristic:0 TotalCost:406
+Adding to frontier 
+Name: Hirsova Parent: Urziceni Cost: 419 Order: 5 Heuristic: 151 TotalCost: 570
+frontier
+Name:Bucharest Parent:Urziceni Order:4 Cost:406 Heuristic:0 TotalCost:406
+Processing Node 
+Name: Bucharest Parent: Urziceni Cost: 406 Order: 4 Heuristic: 0 TotalCost: 406
+Adding to frontier 
+Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: 176 TotalCost: 793
+frontier
+Name:Hirsova Parent:Urziceni Order:5 Cost:419 Heuristic:151 TotalCost:570
+Adding to frontier 
+Name: Pitesti Parent: Bucharest Cost: 507 Order: 7 Heuristic: 10 TotalCost: 517
+frontier
+Name:Pitesti Parent:Bucharest Order:7 Cost:507 Heuristic:10 TotalCost:517
+Adding to frontier 
+Name: Giurgiu Parent: Bucharest Cost: 496 Order: 8 Heuristic: 77 TotalCost: 573
+frontier
+Name:Pitesti Parent:Bucharest Order:7 Cost:507 Heuristic:10 TotalCost:517
+Processing Node 
+Name: Pitesti Parent: Bucharest Cost: 507 Order: 7 Heuristic: 10 TotalCost: 517
+Adding to frontier 
+Name: Rimnicu Parent: Pitesti Cost: 604 Order: 9 Heuristic: 193 TotalCost: 797
+frontier
+Name:Hirsova Parent:Urziceni Order:5 Cost:419 Heuristic:151 TotalCost:570
+Processing Node 
+Name: Hirsova Parent: Urziceni Cost: 419 Order: 5 Heuristic: 151 TotalCost: 570
+Adding to frontier 
+Name: Eforie Parent: Hirsova Cost: 505 Order: 10 Heuristic: 161 TotalCost: 666
+frontier
+Name:Giurgiu Parent:Bucharest Order:8 Cost:496 Heuristic:77 TotalCost:573
+Processing Node 
+Name: Giurgiu Parent: Bucharest Cost: 496 Order: 8 Heuristic: 77 TotalCost: 573
+Processing Node 
+Name: Eforie Parent: Hirsova Cost: 505 Order: 10 Heuristic: 161 TotalCost: 666
+Processing Node 
+Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: 176 TotalCost: 793
+Adding to frontier 
+Name: Sibiu Parent: Fagaras Cost: 716 Order: 11 Heuristic: 253 TotalCost: 969
+frontier
+Name:Rimnicu Parent:Pitesti Order:9 Cost:604 Heuristic:193 TotalCost:797
+Processing Node 
+Name: Rimnicu Parent: Pitesti Cost: 604 Order: 9 Heuristic: 193 TotalCost: 797
+Updating existing cost
+Removing node from frontier named Sibiu
+Removing node from frontier Cost Map with values Cost: 969 Order:11
+Adding new node to frontier Name: Sibiu Parent: Rimnicu Cost: 684 Order: 12 Heuristic: 253 TotalCost: 937
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 750 Order: 13 Heuristic: 160 TotalCost: 910
+frontier
+Name:Craiova Parent:Rimnicu Order:13 Cost:750 Heuristic:160 TotalCost:910
+Processing Node 
+Name: Craiova Parent: Rimnicu Cost: 750 Order: 13 Heuristic: 160 TotalCost: 910
+Adding to frontier 
+Name: Dobreta Parent: Craiova Cost: 870 Order: 14 Heuristic: 242 TotalCost: 1112
+frontier
+Name:Sibiu Parent:Rimnicu Order:12 Cost:684 Heuristic:253 TotalCost:937
+Processing Node 
+Name: Sibiu Parent: Rimnicu Cost: 684 Order: 12 Heuristic: 253 TotalCost: 937
+Adding to frontier 
+Name: Oradea Parent: Sibiu Cost: 835 Order: 15 Heuristic: 0 TotalCost: 835
+frontier
+Name:Oradea Parent:Sibiu Order:15 Cost:835 Heuristic:0 TotalCost:835
+Adding to frontier 
+Name: Arad Parent: Sibiu Cost: 824 Order: 16 Heuristic: 366 TotalCost: 1190
+frontier
+Name:Oradea Parent:Sibiu Order:15 Cost:835 Heuristic:0 TotalCost:835
+Processing Node 
+Name: Oradea Parent: Sibiu Cost: 835 Order: 15 Heuristic: 0 TotalCost: 835
+Oradea 835
+Sibiu 684
+Rimnicu 604
+Pitesti 507
+Bucharest 406
+Urziceni 321
+Vaslui 179
+Iasi 87
+Neamt 0
+Time to perform search 8
+Correct output:
+Neamt 0
+Iasi 87
+Vaslui 179
+Urziceni 321
+Bucharest 406
+Pitesti 507
+Rimnicu 604
+Sibiu 684
+Oradea 835
+Content from your output file:
+Neamt 0
+Iasi 87
+Vaslui 179
+Urziceni 321
+Bucharest 406
+Pitesti 507
+Rimnicu 604
+Sibiu 684
+Oradea 835
+test case passed!
+Input File:30
+UCS
+Neamt
+Oradea
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 366
+Bucharest 0
+Craiova 160
+Dobreta 242
+Eforie 161
+Fagaras 176
+Giurgiu 77
+Hirsova 151
+Iasi 226
+Lugoj 244
+Mehadia 241
+Neamt 234
+Pitesti 10
+Rimnicu 193
+Sibiu 253
+Timisoara 329
+Urziceni 80
+Vaslui 199
+Zerind 374
+Oradea 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 3
+TIme to create graph 1
+Evalutaing Node Neamt
+Frontier []
+Adding to frontier 
+Name: Iasi Parent: Neamt Cost: 87 Order: null Heuristic: null TotalCost: null
+frontier
+87 Name:Iasi Parent:Neamt Cost: 87
+Evalutaing Node Iasi
+Frontier []
+Adding to frontier 
+Name: Vaslui Parent: Iasi Cost: 179 Order: null Heuristic: null TotalCost: null
+frontier
+179 Name:Vaslui Parent:Iasi Cost: 179
+Evalutaing Node Vaslui
+Frontier []
+Adding to frontier 
+Name: Urziceni Parent: Vaslui Cost: 321 Order: null Heuristic: null TotalCost: null
+frontier
+321 Name:Urziceni Parent:Vaslui Cost: 321
+Evalutaing Node Urziceni
+Frontier []
+Adding to frontier 
+Name: Bucharest Parent: Urziceni Cost: 406 Order: null Heuristic: null TotalCost: null
+frontier
+406 Name:Bucharest Parent:Urziceni Cost: 406
+Adding to frontier 
+Name: Hirsova Parent: Urziceni Cost: 419 Order: null Heuristic: null TotalCost: null
+frontier
+406 Name:Bucharest Parent:Urziceni Cost: 406
+Evalutaing Node Bucharest
+Frontier [Name: Hirsova Parent: Urziceni Cost: 419 Order: 5 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Fagaras Parent: Bucharest Cost: 617 Order: null Heuristic: null TotalCost: null
+frontier
+419 Name:Hirsova Parent:Urziceni Cost: 419
+Adding to frontier 
+Name: Pitesti Parent: Bucharest Cost: 507 Order: null Heuristic: null TotalCost: null
+frontier
+419 Name:Hirsova Parent:Urziceni Cost: 419
+Adding to frontier 
+Name: Giurgiu Parent: Bucharest Cost: 496 Order: null Heuristic: null TotalCost: null
+frontier
+419 Name:Hirsova Parent:Urziceni Cost: 419
+Evalutaing Node Hirsova
+Frontier [Name: Giurgiu Parent: Bucharest Cost: 496 Order: 8 Heuristic: null TotalCost: null, Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: null TotalCost: null, Name: Pitesti Parent: Bucharest Cost: 507 Order: 7 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Eforie Parent: Hirsova Cost: 505 Order: null Heuristic: null TotalCost: null
+frontier
+496 Name:Giurgiu Parent:Bucharest Cost: 496
+Evalutaing Node Giurgiu
+Frontier [Name: Eforie Parent: Hirsova Cost: 505 Order: 9 Heuristic: null TotalCost: null, Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: null TotalCost: null, Name: Pitesti Parent: Bucharest Cost: 507 Order: 7 Heuristic: null TotalCost: null]
+Evalutaing Node Eforie
+Frontier [Name: Pitesti Parent: Bucharest Cost: 507 Order: 7 Heuristic: null TotalCost: null, Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: null TotalCost: null]
+Evalutaing Node Pitesti
+Frontier [Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Rimnicu Parent: Pitesti Cost: 604 Order: null Heuristic: null TotalCost: null
+frontier
+604 Name:Rimnicu Parent:Pitesti Cost: 604
+Evalutaing Node Rimnicu
+Frontier [Name: Fagaras Parent: Bucharest Cost: 617 Order: 6 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Sibiu Parent: Rimnicu Cost: 684 Order: null Heuristic: null TotalCost: null
+frontier
+617 Name:Fagaras Parent:Bucharest Cost: 617
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 750 Order: null Heuristic: null TotalCost: null
+frontier
+617 Name:Fagaras Parent:Bucharest Cost: 617
+Evalutaing Node Fagaras
+Frontier [Name: Sibiu Parent: Rimnicu Cost: 684 Order: 11 Heuristic: null TotalCost: null, Name: Craiova Parent: Rimnicu Cost: 750 Order: 12 Heuristic: null TotalCost: null]
+Evalutaing Node Sibiu
+Frontier [Name: Craiova Parent: Rimnicu Cost: 750 Order: 12 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Oradea Parent: Sibiu Cost: 835 Order: null Heuristic: null TotalCost: null
+frontier
+750 Name:Craiova Parent:Rimnicu Cost: 750
+Adding to frontier 
+Name: Arad Parent: Sibiu Cost: 824 Order: null Heuristic: null TotalCost: null
+frontier
+750 Name:Craiova Parent:Rimnicu Cost: 750
+Evalutaing Node Craiova
+Frontier [Name: Arad Parent: Sibiu Cost: 824 Order: 14 Heuristic: null TotalCost: null, Name: Oradea Parent: Sibiu Cost: 835 Order: 13 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Dobreta Parent: Craiova Cost: 870 Order: null Heuristic: null TotalCost: null
+frontier
+824 Name:Arad Parent:Sibiu Cost: 824
+Evalutaing Node Arad
+Frontier [Name: Oradea Parent: Sibiu Cost: 835 Order: 13 Heuristic: null TotalCost: null, Name: Dobreta Parent: Craiova Cost: 870 Order: 15 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: Zerind Parent: Arad Cost: 899 Order: null Heuristic: null TotalCost: null
+frontier
+835 Name:Oradea Parent:Sibiu Cost: 835
+Adding to frontier 
+Name: Timisoara Parent: Arad Cost: 942 Order: null Heuristic: null TotalCost: null
+frontier
+835 Name:Oradea Parent:Sibiu Cost: 835
+Evalutaing Node Oradea
+Frontier [Name: Dobreta Parent: Craiova Cost: 870 Order: 15 Heuristic: null TotalCost: null, Name: Timisoara Parent: Arad Cost: 942 Order: 17 Heuristic: null TotalCost: null, Name: Zerind Parent: Arad Cost: 899 Order: 16 Heuristic: null TotalCost: null]
+[Name: Dobreta Parent: Craiova Cost: 870 Order: 15 Heuristic: null TotalCost: null, Name: Timisoara Parent: Arad Cost: 942 Order: 17 Heuristic: null TotalCost: null, Name: Zerind Parent: Arad Cost: 899 Order: 16 Heuristic: null TotalCost: null]
+Oradea 835
+Sibiu 684
+Rimnicu 604
+Pitesti 507
+Bucharest 406
+Urziceni 321
+Vaslui 179
+Iasi 87
+Neamt 0
+Time to perform search 7
+Correct output:
+Neamt 0
+Iasi 87
+Vaslui 179
+Urziceni 321
+Bucharest 406
+Pitesti 507
+Rimnicu 604
+Sibiu 684
+Oradea 835
+Content from your output file:
+Neamt 0
+Iasi 87
+Vaslui 179
+Urziceni 321
+Bucharest 406
+Pitesti 507
+Rimnicu 604
+Sibiu 684
+Oradea 835
+test case passed!
+Input File:31
+A*
+Oradea
+Neamt
+44
+Oradea Zerind 71
+Zerind Oradea 71
+Oradea Sibiu 151
+Sibiu Oradea 151
+Zerind Arad 75
+Arad Zerind 75
+Arad Sibiu 140
+Sibiu Arad 140
+Arad Timisoara 118
+Timisoara Arad 118
+Timisoara Lugoj 111
+Lugoj Timisoara 111
+Lugoj Mehadia 70
+Mehadia Lugoj 70
+Mehadia Dobreta 75
+Dobreta Mehadia 75
+Dobreta Craiova 120
+Craiova Dobreta 120
+Sibiu Fagaras 99
+Fagaras Sibiu 99
+Sibiu Rimnicu 80
+Rimnicu Sibiu 80
+Rimnicu Craiova 146
+Craiova Rimnicu 146
+Rimnicu Pitesti 97
+Pitesti Rimnicu 97
+Fagaras Bucharest 211
+Bucharest Fagaras 211
+Pitesti Bucharest 101
+Bucharest Pitesti 101
+Giurgiu Bucharest 90
+Bucharest Giurgiu 90
+Neamt Iasi 87
+Iasi Neamt 87
+Iasi Vaslui 92
+Vaslui Iasi 92
+Vaslui Urziceni 142
+Urziceni Vaslui 142
+Bucharest Urziceni 85
+Urziceni Bucharest 85
+Urziceni Hirsova 98
+Hirsova Urziceni 98
+Hirsova Eforie 86
+Eforie Hirsova 86
+20
+Arad 0
+Bucharest 0
+Craiova 0
+Dobreta 0
+Eforie 0
+Fagaras 0
+Giurgiu 0
+Hirsova 0
+Iasi 0
+Lugoj 0
+Mehadia 0
+Oradea 0
+Pitesti 0
+Rimnicu 0
+Sibiu 0
+Timisoara 0
+Urziceni 0
+Vaslui 0
+Zerind 0
+Neamt 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: Oradea Parent: Null Cost: 0 Order: 1 Heuristic: 0 TotalCost: 0
+Adding to frontier 
+Name: Zerind Parent: Oradea Cost: 71 Order: 1 Heuristic: 0 TotalCost: 71
+frontier
+Name:Zerind Parent:Oradea Order:1 Cost:71 Heuristic:0 TotalCost:71
+Adding to frontier 
+Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: 0 TotalCost: 151
+frontier
+Name:Zerind Parent:Oradea Order:1 Cost:71 Heuristic:0 TotalCost:71
+Processing Node 
+Name: Zerind Parent: Oradea Cost: 71 Order: 1 Heuristic: 0 TotalCost: 71
+Adding to frontier 
+Name: Arad Parent: Zerind Cost: 146 Order: 3 Heuristic: 0 TotalCost: 146
+frontier
+Name:Arad Parent:Zerind Order:3 Cost:146 Heuristic:0 TotalCost:146
+Processing Node 
+Name: Arad Parent: Zerind Cost: 146 Order: 3 Heuristic: 0 TotalCost: 146
+Adding to frontier 
+Name: Timisoara Parent: Arad Cost: 264 Order: 4 Heuristic: 0 TotalCost: 264
+frontier
+Name:Sibiu Parent:Oradea Order:2 Cost:151 Heuristic:0 TotalCost:151
+Processing Node 
+Name: Sibiu Parent: Oradea Cost: 151 Order: 2 Heuristic: 0 TotalCost: 151
+Adding to frontier 
+Name: Fagaras Parent: Sibiu Cost: 250 Order: 5 Heuristic: 0 TotalCost: 250
+frontier
+Name:Fagaras Parent:Sibiu Order:5 Cost:250 Heuristic:0 TotalCost:250
+Adding to frontier 
+Name: Rimnicu Parent: Sibiu Cost: 231 Order: 6 Heuristic: 0 TotalCost: 231
+frontier
+Name:Rimnicu Parent:Sibiu Order:6 Cost:231 Heuristic:0 TotalCost:231
+Processing Node 
+Name: Rimnicu Parent: Sibiu Cost: 231 Order: 6 Heuristic: 0 TotalCost: 231
+Adding to frontier 
+Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: 0 TotalCost: 377
+frontier
+Name:Fagaras Parent:Sibiu Order:5 Cost:250 Heuristic:0 TotalCost:250
+Adding to frontier 
+Name: Pitesti Parent: Rimnicu Cost: 328 Order: 8 Heuristic: 0 TotalCost: 328
+frontier
+Name:Fagaras Parent:Sibiu Order:5 Cost:250 Heuristic:0 TotalCost:250
+Processing Node 
+Name: Fagaras Parent: Sibiu Cost: 250 Order: 5 Heuristic: 0 TotalCost: 250
+Adding to frontier 
+Name: Bucharest Parent: Fagaras Cost: 461 Order: 9 Heuristic: 0 TotalCost: 461
+frontier
+Name:Timisoara Parent:Arad Order:4 Cost:264 Heuristic:0 TotalCost:264
+Processing Node 
+Name: Timisoara Parent: Arad Cost: 264 Order: 4 Heuristic: 0 TotalCost: 264
+Adding to frontier 
+Name: Lugoj Parent: Timisoara Cost: 375 Order: 10 Heuristic: 0 TotalCost: 375
+frontier
+Name:Pitesti Parent:Rimnicu Order:8 Cost:328 Heuristic:0 TotalCost:328
+Processing Node 
+Name: Pitesti Parent: Rimnicu Cost: 328 Order: 8 Heuristic: 0 TotalCost: 328
+Updating existing cost
+Removing node from frontier named Bucharest
+Removing node from frontier Cost Map with values Cost: 461 Order:9
+Adding new node to frontier Name: Bucharest Parent: Pitesti Cost: 429 Order: 11 Heuristic: 0 TotalCost: 429
+Processing Node 
+Name: Lugoj Parent: Timisoara Cost: 375 Order: 10 Heuristic: 0 TotalCost: 375
+Adding to frontier 
+Name: Mehadia Parent: Lugoj Cost: 445 Order: 12 Heuristic: 0 TotalCost: 445
+frontier
+Name:Craiova Parent:Rimnicu Order:7 Cost:377 Heuristic:0 TotalCost:377
+Processing Node 
+Name: Craiova Parent: Rimnicu Cost: 377 Order: 7 Heuristic: 0 TotalCost: 377
+Adding to frontier 
+Name: Dobreta Parent: Craiova Cost: 497 Order: 13 Heuristic: 0 TotalCost: 497
+frontier
+Name:Bucharest Parent:Pitesti Order:11 Cost:429 Heuristic:0 TotalCost:429
+Processing Node 
+Name: Bucharest Parent: Pitesti Cost: 429 Order: 11 Heuristic: 0 TotalCost: 429
+Adding to frontier 
+Name: Giurgiu Parent: Bucharest Cost: 519 Order: 14 Heuristic: 0 TotalCost: 519
+frontier
+Name:Mehadia Parent:Lugoj Order:12 Cost:445 Heuristic:0 TotalCost:445
+Adding to frontier 
+Name: Urziceni Parent: Bucharest Cost: 514 Order: 15 Heuristic: 0 TotalCost: 514
+frontier
+Name:Mehadia Parent:Lugoj Order:12 Cost:445 Heuristic:0 TotalCost:445
+Processing Node 
+Name: Mehadia Parent: Lugoj Cost: 445 Order: 12 Heuristic: 0 TotalCost: 445
+Processing Node 
+Name: Dobreta Parent: Craiova Cost: 497 Order: 13 Heuristic: 0 TotalCost: 497
+Processing Node 
+Name: Urziceni Parent: Bucharest Cost: 514 Order: 15 Heuristic: 0 TotalCost: 514
+Adding to frontier 
+Name: Vaslui Parent: Urziceni Cost: 656 Order: 16 Heuristic: 0 TotalCost: 656
+frontier
+Name:Giurgiu Parent:Bucharest Order:14 Cost:519 Heuristic:0 TotalCost:519
+Adding to frontier 
+Name: Hirsova Parent: Urziceni Cost: 612 Order: 17 Heuristic: 0 TotalCost: 612
+frontier
+Name:Giurgiu Parent:Bucharest Order:14 Cost:519 Heuristic:0 TotalCost:519
+Processing Node 
+Name: Giurgiu Parent: Bucharest Cost: 519 Order: 14 Heuristic: 0 TotalCost: 519
+Processing Node 
+Name: Hirsova Parent: Urziceni Cost: 612 Order: 17 Heuristic: 0 TotalCost: 612
+Adding to frontier 
+Name: Eforie Parent: Hirsova Cost: 698 Order: 18 Heuristic: 0 TotalCost: 698
+frontier
+Name:Vaslui Parent:Urziceni Order:16 Cost:656 Heuristic:0 TotalCost:656
+Processing Node 
+Name: Vaslui Parent: Urziceni Cost: 656 Order: 16 Heuristic: 0 TotalCost: 656
+Adding to frontier 
+Name: Iasi Parent: Vaslui Cost: 748 Order: 19 Heuristic: 0 TotalCost: 748
+frontier
+Name:Eforie Parent:Hirsova Order:18 Cost:698 Heuristic:0 TotalCost:698
+Processing Node 
+Name: Eforie Parent: Hirsova Cost: 698 Order: 18 Heuristic: 0 TotalCost: 698
+Processing Node 
+Name: Iasi Parent: Vaslui Cost: 748 Order: 19 Heuristic: 0 TotalCost: 748
+Adding to frontier 
+Name: Neamt Parent: Iasi Cost: 835 Order: 20 Heuristic: 0 TotalCost: 835
+frontier
+Name:Neamt Parent:Iasi Order:20 Cost:835 Heuristic:0 TotalCost:835
+Processing Node 
+Name: Neamt Parent: Iasi Cost: 835 Order: 20 Heuristic: 0 TotalCost: 835
+Neamt 835
+Iasi 748
+Vaslui 656
+Urziceni 514
+Bucharest 429
+Pitesti 328
+Rimnicu 231
+Sibiu 151
+Oradea 0
+Time to perform search 9
+Correct output:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+Urziceni 514
+Vaslui 656
+Iasi 748
+Neamt 835
+Content from your output file:
+Oradea 0
+Sibiu 151
+Rimnicu 231
+Pitesti 328
+Bucharest 429
+Urziceni 514
+Vaslui 656
+Iasi 748
+Neamt 835
+test case passed!
+Input File:32
+BFS
+A
+H
+9
+A B 1
+A C 1
+A D 1
+B E 2
+C F 2
+D G 2
+E H 1
+F H 1
+G H 1
+8
+A 999
+B 998
+C 997
+D 996
+E 995
+F 995
+G 990
+H 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+H 3
+E 2
+B 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+B 1
+E 2
+H 3
+Content from your output file:
+A 0
+B 1
+E 2
+H 3
+test case passed!
+Input File:33
+DFS
+A
+D
+4
+A B 5
+A C 3
+B D 1
+C D 2
+4
+A 4
+B 1
+C 1
+D 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 5 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: D Parent: B Cost: 6 Order: 3 Heuristic: null TotalCost: null
+D 2
+B 1
+A 0
+Time to perform search 3
+Correct output:
+A 0
+B 1
+D 2
+Content from your output file:
+A 0
+B 1
+D 2
+test case passed!
+Input File:34
+UCS
+A
+E
+6
+A B 1
+B C 1
+C D 1
+D E 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Adding to frontier 
+Name: E Parent: A Cost: 10 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Evalutaing Node B
+Frontier [Name: E Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: C Parent: B Cost: 2 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:C Parent:B Cost: 2
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: E Parent: B Cost: 6 Order: null Heuristic: null TotalCost: null
+Evalutaing Node C
+Frontier [Name: E Parent: B Cost: 6 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: C Cost: 3 Order: null Heuristic: null TotalCost: null
+frontier
+3 Name:D Parent:C Cost: 3
+Evalutaing Node D
+Frontier [Name: E Parent: B Cost: 6 Order: 4 Heuristic: null TotalCost: null]
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 6 Order:4
+Adding new node to frontier Name: E Parent: D Cost: 4 Order: null Heuristic: null TotalCost: null
+Evalutaing Node E
+Frontier []
+[]
+E 4
+D 3
+C 2
+B 1
+A 0
+Time to perform search 5
+Correct output:
+A 0
+B 1
+C 2
+D 3
+E 4
+Content from your output file:
+A 0
+B 1
+C 2
+D 3
+E 4
+test case passed!
+Input File:35
+A*
+A
+E
+6
+A B 1
+B C 1
+C D 1
+D E 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 4 TotalCost: 4
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: E Parent: A Cost: 10 Order: 2 Heuristic: 0 TotalCost: 10
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+Adding to frontier 
+Name: C Parent: B Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+frontier
+Name:C Parent:B Order:3 Cost:2 Heuristic:1 TotalCost:3
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: E Parent: B Cost: 6 Order: 4 Heuristic: 0 TotalCost: 6
+Processing Node 
+Name: C Parent: B Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+Adding to frontier 
+Name: D Parent: C Cost: 3 Order: 5 Heuristic: 1 TotalCost: 4
+frontier
+Name:D Parent:C Order:5 Cost:3 Heuristic:1 TotalCost:4
+Processing Node 
+Name: D Parent: C Cost: 3 Order: 5 Heuristic: 1 TotalCost: 4
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 6 Order:4
+Adding new node to frontier Name: E Parent: D Cost: 4 Order: 6 Heuristic: 0 TotalCost: 4
+Processing Node 
+Name: E Parent: D Cost: 4 Order: 6 Heuristic: 0 TotalCost: 4
+E 4
+D 3
+C 2
+B 1
+A 0
+Time to perform search 6
+Correct output:
+A 0
+B 1
+C 2
+D 3
+E 4
+Content from your output file:
+A 0
+B 1
+C 2
+D 3
+E 4
+test case passed!
+Input File:36
+BFS
+A
+A
+6
+A B 1
+B C 1
+C D 1
+D E 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+Content from your output file:
+A 0
+test case passed!
+Input File:37
+DFS
+A
+E
+5
+A B 1
+B C 1
+C D 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 1 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: C Parent: B Cost: 2 Order: 2 Heuristic: null TotalCost: null
+Node visited Name: D Parent: C Cost: 3 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: E Parent: A Cost: 10 Order: 4 Heuristic: null TotalCost: null
+E 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+E 1
+Content from your output file:
+A 0
+E 1
+test case passed!
+Input File:38
+A*
+A
+E
+5
+A B 1
+B C 1
+C D 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 4 TotalCost: 4
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: E Parent: A Cost: 10 Order: 2 Heuristic: 0 TotalCost: 10
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+Adding to frontier 
+Name: C Parent: B Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+frontier
+Name:C Parent:B Order:3 Cost:2 Heuristic:1 TotalCost:3
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: E Parent: B Cost: 6 Order: 4 Heuristic: 0 TotalCost: 6
+Processing Node 
+Name: C Parent: B Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+Adding to frontier 
+Name: D Parent: C Cost: 3 Order: 5 Heuristic: 1 TotalCost: 4
+frontier
+Name:D Parent:C Order:5 Cost:3 Heuristic:1 TotalCost:4
+Processing Node 
+Name: D Parent: C Cost: 3 Order: 5 Heuristic: 1 TotalCost: 4
+Processing Node 
+Name: E Parent: B Cost: 6 Order: 4 Heuristic: 0 TotalCost: 6
+E 6
+B 1
+A 0
+Time to perform search 5
+Correct output:
+A 0
+B 1
+E 6
+Content from your output file:
+A 0
+B 1
+E 6
+test case passed!
+Input File:39
+UCS
+A
+E
+5
+A B 1
+B C 1
+C D 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Adding to frontier 
+Name: E Parent: A Cost: 10 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:B Parent:A Cost: 1
+Evalutaing Node B
+Frontier [Name: E Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: C Parent: B Cost: 2 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:C Parent:B Cost: 2
+Updating existing cost
+Removing node from frontier named E
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: E Parent: B Cost: 6 Order: null Heuristic: null TotalCost: null
+Evalutaing Node C
+Frontier [Name: E Parent: B Cost: 6 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: C Cost: 3 Order: null Heuristic: null TotalCost: null
+frontier
+3 Name:D Parent:C Cost: 3
+Evalutaing Node D
+Frontier [Name: E Parent: B Cost: 6 Order: 4 Heuristic: null TotalCost: null]
+Evalutaing Node E
+Frontier []
+[]
+E 6
+B 1
+A 0
+Time to perform search 5
+Correct output:
+A 0
+B 1
+E 6
+Content from your output file:
+A 0
+B 1
+E 6
+test case passed!
+Input File:40
+BFS
+A
+E
+5
+A B 1
+B C 1
+C D 1
+A E 10
+B E 5
+5
+A 4
+B 1
+C 1
+D 1
+E 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+E 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+E 1
+Content from your output file:
+A 0
+E 1
+test case passed!
+Input File:41
+DFS
+A
+F
+8
+A B 6
+A C 1
+B D 1
+B E 10
+E B 1
+C E 1
+D F 1
+E F 6
+6
+A 3
+B 2
+C 2
+D 1
+E 1
+F 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 6 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: D Parent: B Cost: 7 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: F Parent: D Cost: 8 Order: 7 Heuristic: null TotalCost: null
+F 3
+D 2
+B 1
+A 0
+Time to perform search 3
+Correct output:
+A 0
+B 1
+D 2
+F 3
+Content from your output file:
+A 0
+B 1
+D 2
+F 3
+test case passed!
+Input File:42
+A*
+A
+F
+8
+A B 6
+A C 1
+B D 1
+B E 10
+E B 1
+C E 1
+D F 1
+E F 6
+6
+A 3
+B 2
+C 2
+D 1
+E 1
+F 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 3 TotalCost: 3
+Adding to frontier 
+Name: B Parent: A Cost: 6 Order: 1 Heuristic: 2 TotalCost: 8
+frontier
+Name:B Parent:A Order:1 Cost:6 Heuristic:2 TotalCost:8
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: 2 Heuristic: 2 TotalCost: 3
+frontier
+Name:C Parent:A Order:2 Cost:1 Heuristic:2 TotalCost:3
+Processing Node 
+Name: C Parent: A Cost: 1 Order: 2 Heuristic: 2 TotalCost: 3
+Adding to frontier 
+Name: E Parent: C Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+frontier
+Name:E Parent:C Order:3 Cost:2 Heuristic:1 TotalCost:3
+Processing Node 
+Name: E Parent: C Cost: 2 Order: 3 Heuristic: 1 TotalCost: 3
+Updating existing cost
+Removing node from frontier named B
+Removing node from frontier Cost Map with values Cost: 8 Order:1
+Adding new node to frontier Name: B Parent: E Cost: 3 Order: 4 Heuristic: 2 TotalCost: 5
+Adding to frontier 
+Name: F Parent: E Cost: 8 Order: 5 Heuristic: 0 TotalCost: 8
+frontier
+Name:B Parent:E Order:4 Cost:3 Heuristic:2 TotalCost:5
+Processing Node 
+Name: B Parent: E Cost: 3 Order: 4 Heuristic: 2 TotalCost: 5
+Adding to frontier 
+Name: D Parent: B Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+frontier
+Name:D Parent:B Order:6 Cost:4 Heuristic:1 TotalCost:5
+Processing Node 
+Name: D Parent: B Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+Updating existing cost
+Removing node from frontier named F
+Removing node from frontier Cost Map with values Cost: 8 Order:5
+Adding new node to frontier Name: F Parent: D Cost: 5 Order: 7 Heuristic: 0 TotalCost: 5
+Processing Node 
+Name: F Parent: D Cost: 5 Order: 7 Heuristic: 0 TotalCost: 5
+F 5
+D 4
+B 3
+E 2
+C 1
+A 0
+Time to perform search 6
+Correct output:
+A 0
+C 1
+E 2
+B 3
+D 4
+F 5
+Content from your output file:
+A 0
+C 1
+E 2
+B 3
+D 4
+F 5
+test case passed!
+Input File:43
+DFS
+A
+C
+7
+A B 1
+A C 10
+B C 8
+C B 1
+C A 1
+B D 2
+D C 3
+4
+A 3
+B 1
+C 0
+D 1
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 1 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: D Parent: B Cost: 3 Order: 6 Heuristic: null TotalCost: null
+Node visited Name: C Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null
+C 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+C 1
+Content from your output file:
+A 0
+C 1
+test case passed!
+Input File:44
+A*
+A
+C
+7
+A B 1
+A C 10
+B C 8
+C B 1
+C A 1
+B D 2
+D C 3
+4
+A 3
+B 1
+C 0
+D 1
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 3 TotalCost: 3
+Adding to frontier 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Adding to frontier 
+Name: C Parent: A Cost: 10 Order: 2 Heuristic: 0 TotalCost: 10
+frontier
+Name:B Parent:A Order:1 Cost:1 Heuristic:1 TotalCost:2
+Processing Node 
+Name: B Parent: A Cost: 1 Order: 1 Heuristic: 1 TotalCost: 2
+Updating existing cost
+Removing node from frontier named C
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: C Parent: B Cost: 9 Order: 3 Heuristic: 0 TotalCost: 9
+Adding to frontier 
+Name: D Parent: B Cost: 3 Order: 4 Heuristic: 1 TotalCost: 4
+frontier
+Name:D Parent:B Order:4 Cost:3 Heuristic:1 TotalCost:4
+Processing Node 
+Name: D Parent: B Cost: 3 Order: 4 Heuristic: 1 TotalCost: 4
+Updating existing cost
+Removing node from frontier named C
+Removing node from frontier Cost Map with values Cost: 9 Order:3
+Adding new node to frontier Name: C Parent: D Cost: 6 Order: 5 Heuristic: 0 TotalCost: 6
+Processing Node 
+Name: C Parent: D Cost: 6 Order: 5 Heuristic: 0 TotalCost: 6
+C 6
+D 3
+B 1
+A 0
+Time to perform search 4
+Correct output:
+A 0
+B 1
+D 3
+C 6
+Content from your output file:
+A 0
+B 1
+D 3
+C 6
+test case passed!
+Input File:45
+BFS
+A
+G
+9
+A C 1
+A B 10
+D B 1
+B D 1
+E D 1
+F E 1
+C F 1
+C G 10
+B G 1
+7
+A 3
+B 1
+C 3
+D 1
+E 2
+F 2
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 1
+TIme to create graph 0
+G 2
+C 1
+A 0
+Time to perform search 2
+Correct output:
+A 0
+C 1
+G 2
+Content from your output file:
+A 0
+C 1
+G 2
+test case passed!
+Input File:46
+UCS
+A
+G
+9
+A C 1
+A B 10
+D B 1
+B D 1
+E D 1
+F E 1
+C F 1
+C G 10
+B G 1
+7
+A 3
+B 1
+C 3
+D 1
+E 2
+F 2
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:C Parent:A Cost: 1
+Adding to frontier 
+Name: B Parent: A Cost: 10 Order: null Heuristic: null TotalCost: null
+frontier
+1 Name:C Parent:A Cost: 1
+Evalutaing Node C
+Frontier [Name: B Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: F Parent: C Cost: 2 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:F Parent:C Cost: 2
+Adding to frontier 
+Name: G Parent: C Cost: 11 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:F Parent:C Cost: 2
+Evalutaing Node F
+Frontier [Name: B Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null, Name: G Parent: C Cost: 11 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: E Parent: F Cost: 3 Order: null Heuristic: null TotalCost: null
+frontier
+3 Name:E Parent:F Cost: 3
+Evalutaing Node E
+Frontier [Name: B Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null, Name: G Parent: C Cost: 11 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: E Cost: 4 Order: null Heuristic: null TotalCost: null
+frontier
+4 Name:D Parent:E Cost: 4
+Evalutaing Node D
+Frontier [Name: B Parent: A Cost: 10 Order: 2 Heuristic: null TotalCost: null, Name: G Parent: C Cost: 11 Order: 4 Heuristic: null TotalCost: null]
+Updating existing cost
+Removing node from frontier named B
+Removing node from frontier Cost Map with values Cost: 10 Order:2
+Adding new node to frontier Name: B Parent: D Cost: 5 Order: null Heuristic: null TotalCost: null
+Evalutaing Node B
+Frontier [Name: G Parent: C Cost: 11 Order: 4 Heuristic: null TotalCost: null]
+Updating existing cost
+Removing node from frontier named G
+Removing node from frontier Cost Map with values Cost: 11 Order:4
+Adding new node to frontier Name: G Parent: B Cost: 6 Order: null Heuristic: null TotalCost: null
+Evalutaing Node G
+Frontier []
+[]
+G 6
+B 5
+D 4
+E 3
+F 2
+C 1
+A 0
+Time to perform search 6
+Correct output:
+A 0
+C 1
+F 2
+E 3
+D 4
+B 5
+G 6
+Content from your output file:
+A 0
+C 1
+F 2
+E 3
+D 4
+B 5
+G 6
+test case passed!
+Input File:47
+A*
+A
+G
+9
+A C 1
+A B 10
+D B 1
+B D 1
+E D 1
+F E 1
+C F 1
+C G 10
+B G 1
+7
+A 3
+B 1
+C 3
+D 1
+E 2
+F 2
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Processing Node 
+Name: A Parent: Null Cost: 0 Order: 1 Heuristic: 3 TotalCost: 3
+Adding to frontier 
+Name: C Parent: A Cost: 1 Order: 1 Heuristic: 3 TotalCost: 4
+frontier
+Name:C Parent:A Order:1 Cost:1 Heuristic:3 TotalCost:4
+Adding to frontier 
+Name: B Parent: A Cost: 10 Order: 2 Heuristic: 1 TotalCost: 11
+frontier
+Name:C Parent:A Order:1 Cost:1 Heuristic:3 TotalCost:4
+Processing Node 
+Name: C Parent: A Cost: 1 Order: 1 Heuristic: 3 TotalCost: 4
+Adding to frontier 
+Name: F Parent: C Cost: 2 Order: 3 Heuristic: 2 TotalCost: 4
+frontier
+Name:F Parent:C Order:3 Cost:2 Heuristic:2 TotalCost:4
+Adding to frontier 
+Name: G Parent: C Cost: 11 Order: 4 Heuristic: 0 TotalCost: 11
+frontier
+Name:F Parent:C Order:3 Cost:2 Heuristic:2 TotalCost:4
+Processing Node 
+Name: F Parent: C Cost: 2 Order: 3 Heuristic: 2 TotalCost: 4
+Adding to frontier 
+Name: E Parent: F Cost: 3 Order: 5 Heuristic: 2 TotalCost: 5
+frontier
+Name:E Parent:F Order:5 Cost:3 Heuristic:2 TotalCost:5
+Processing Node 
+Name: E Parent: F Cost: 3 Order: 5 Heuristic: 2 TotalCost: 5
+Adding to frontier 
+Name: D Parent: E Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+frontier
+Name:D Parent:E Order:6 Cost:4 Heuristic:1 TotalCost:5
+Processing Node 
+Name: D Parent: E Cost: 4 Order: 6 Heuristic: 1 TotalCost: 5
+Updating existing cost
+Removing node from frontier named B
+Removing node from frontier Cost Map with values Cost: 11 Order:2
+Adding new node to frontier Name: B Parent: D Cost: 5 Order: 7 Heuristic: 1 TotalCost: 6
+Processing Node 
+Name: B Parent: D Cost: 5 Order: 7 Heuristic: 1 TotalCost: 6
+Updating existing cost
+Removing node from frontier named G
+Removing node from frontier Cost Map with values Cost: 11 Order:4
+Adding new node to frontier Name: G Parent: B Cost: 6 Order: 8 Heuristic: 0 TotalCost: 6
+Processing Node 
+Name: G Parent: B Cost: 6 Order: 8 Heuristic: 0 TotalCost: 6
+G 6
+B 5
+D 4
+E 3
+F 2
+C 1
+A 0
+Time to perform search 7
+Correct output:
+A 0
+C 1
+F 2
+E 3
+D 4
+B 5
+G 6
+Content from your output file:
+A 0
+C 1
+F 2
+E 3
+D 4
+B 5
+G 6
+test case passed!
+Input File:48
+DFS
+A
+H
+12
+A B 1
+B C 1
+C D 1
+A E 10
+E F 2
+F G 3
+G H 3
+A I 1
+I J 1
+J K 1
+K L 1
+L H 1
+12
+A 4
+I 3
+B 3
+E 3
+J 3
+C 2
+F 2
+K 2
+L 1
+G 1
+D 1
+H 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 12
+TIme to create edges 2
+TIme to create graph 0
+Node visited Name: A Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: B Parent: A Cost: 1 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: C Parent: B Cost: 2 Order: 2 Heuristic: null TotalCost: null
+Node visited Name: D Parent: C Cost: 3 Order: 3 Heuristic: null TotalCost: null
+Node visited Name: E Parent: A Cost: 10 Order: 4 Heuristic: null TotalCost: null
+Node visited Name: F Parent: E Cost: 12 Order: 5 Heuristic: null TotalCost: null
+Node visited Name: G Parent: F Cost: 15 Order: 6 Heuristic: null TotalCost: null
+Node visited Name: H Parent: G Cost: 18 Order: 7 Heuristic: null TotalCost: null
+H 4
+G 3
+F 2
+E 1
+A 0
+Time to perform search 3
+Correct output:
+A 0
+E 1
+F 2
+G 3
+H 4
+Content from your output file:
+A 0
+E 1
+F 2
+G 3
+H 4
+test case passed!
+Input File:49
+DFS
+Andy
+Zoe
+10
+Andy Bill 4
+Andy Claire 3
+Andy Daniel 2
+Bill Elaine 3
+Bill Zoe 1
+Claire Elaine 4
+Claire Zoe 2
+Daniel Elaine 2
+Daniel Zoe 2
+Elaine Zoe 2
+6
+Andy 2
+Bill 1
+Claire 1
+Daniel 1
+Elaine 1
+Zoe 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 1
+Node visited Name: Andy Parent: Null Cost: 0 Order: null Heuristic: null TotalCost: null
+Node visited Name: Bill Parent: Andy Cost: 4 Order: 1 Heuristic: null TotalCost: null
+Node visited Name: Elaine Parent: Bill Cost: 7 Order: 4 Heuristic: null TotalCost: null
+Node visited Name: Zoe Parent: Bill Cost: 5 Order: 5 Heuristic: null TotalCost: null
+Zoe 2
+Bill 1
+Andy 0
+Time to perform search 2
+Correct output:
+Andy 0
+Bill 1
+Zoe 2
+Content from your output file:
+Andy 0
+Bill 1
+Zoe 2
+test case passed!
+Input File:50
+UCS
+A
+G
+6
+A B 2
+A C 3
+B D 3
+C E 2
+D G 1
+E G 1
+6
+A 3
+B 2
+C 2
+D 1
+E 1
+G 0
+Working Directory = /home/ccc_fef6630f7d_14136/work/view_vc_2_0_csci_561_fall2016_6_m7317_6/882b8b3565a18ac726060cefdcfeaf4d
+Reading file Started 
+Reading file Completed 11
+TIme to create edges 2
+TIme to create graph 0
+Evalutaing Node A
+Frontier []
+Adding to frontier 
+Name: B Parent: A Cost: 2 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:B Parent:A Cost: 2
+Adding to frontier 
+Name: C Parent: A Cost: 3 Order: null Heuristic: null TotalCost: null
+frontier
+2 Name:B Parent:A Cost: 2
+Evalutaing Node B
+Frontier [Name: C Parent: A Cost: 3 Order: 2 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: D Parent: B Cost: 5 Order: null Heuristic: null TotalCost: null
+frontier
+3 Name:C Parent:A Cost: 3
+Evalutaing Node C
+Frontier [Name: D Parent: B Cost: 5 Order: 3 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: E Parent: C Cost: 5 Order: null Heuristic: null TotalCost: null
+frontier
+5 Name:D Parent:B Cost: 5
+Evalutaing Node D
+Frontier [Name: E Parent: C Cost: 5 Order: 4 Heuristic: null TotalCost: null]
+Adding to frontier 
+Name: G Parent: D Cost: 6 Order: null Heuristic: null TotalCost: null
+frontier
+5 Name:E Parent:C Cost: 5
+Evalutaing Node E
+Frontier [Name: G Parent: D Cost: 6 Order: 5 Heuristic: null TotalCost: null]
+Evalutaing Node G
+Frontier []
+[]
+G 6
+D 5
+B 2
+A 0
+Time to perform search 4
+Correct output:
+A 0
+B 2
+D 5
+G 6
+Content from your output file:
+A 0
+B 2
+D 5
+G 6
+test case passed!
+100
